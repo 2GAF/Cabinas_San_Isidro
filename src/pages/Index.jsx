@@ -1,4 +1,5 @@
 import { Header } from "../common/Header.jsx";
+import { Footer } from "../common/Footer.jsx";
 import hero_img from "../assets/hero-img.jpg"
 import habitaciones from "../assets/habitaciones.jpg"
 import { Link } from 'react-router-dom';
@@ -91,7 +92,7 @@ export function Index() {
           </div>
       </section>
       {/* Servicios ofrecidos */}
-
+      <Footer/>
     </div>
   )
 }
