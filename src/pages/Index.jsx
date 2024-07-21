@@ -1,10 +1,11 @@
 import { Header } from "../common/Header.jsx";
-import { Contacto } from "./Contacto.jsx";
+import {Footer} from "../common/Footer.jsx";
 export function Index(){
 
     return (
-        <div className="mx-[3.75rem] mt-[2.875rem]">
+        <div>
         <Header />
+        <Footer />
         </div>
       )
 }
