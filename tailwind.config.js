@@ -10,6 +10,7 @@ export default {
         'blue-1': '#2C5CA3',
         'blue-2': '#408DFF',
         'gray-1': '#727272',
+        'gray-2': '#F2F2F2',
         'gray-cards': '#B8BDC1',
       },
       fontFamily: {

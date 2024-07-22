@@ -9,5 +9,6 @@ export function Opcion({setter, text, isActive}){
     const btnClases = `${clasesBase} ${isActive == text ? clasesActivo : clasesInactivo}`
     return(
         <button onClick={()=>setter(text)} className={btnClases}>{text}</button>
+        
     )
 }
