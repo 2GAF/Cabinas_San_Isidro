@@ -20,7 +20,10 @@ export function Header() {
         <ul className='flex flex-col lg:flex-row gap-x-[3.125rem] gap-y-[2.875rem] font-outfit text-links text-left px-[1.5rem]'>
           <li className='flex gap-5'><img src={inicio} alt="" /><Link to="/" className='hover:underline underline-offset-4'>Inicio</Link></li>
           <li className='flex gap-5'><img src={cabinas} alt="" /><Link to="/cabinas" className='hover:underline underline-offset-4'>Cabinas</Link></li>
-          <li className='flex gap-5'><img src={habitaciones} alt="" /><Link to="/habitaciones" className='hover:underline underline-offset-4'>Habitaciones</Link></li>
+          <li className='flex gap-5'>
+            <img src={habitaciones} alt="" />
+            <Link to="/habitaciones" className='hover:underline underline-offset-4'>Habitaciones</Link>
+            </li>
           <li className='flex gap-5'><img src={nosotros} alt="" /><Link to="/sobre-nosotros" className='hover:underline underline-offset-4'>Sobre Nosotros</Link></li>
           <li className='flex gap-5'><img src={socios} alt="" /><Link to="/tiempo-compartido" className='hover:underline underline-offset-4'>Tiempo Compartido</Link></li>
         </ul>
