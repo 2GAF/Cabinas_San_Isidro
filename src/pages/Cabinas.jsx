@@ -8,6 +8,7 @@ import { Cantidad } from "../buttons/Cantidad.jsx";
 import fanBlue from "../assets/fanBlack.svg";
 import tvBlue from "../assets/tvBlack.svg";
 import { useCabInfo } from "../hooks/useCabInfo.js";
+import { CabinaCard } from "../buttons/CabinaCard.jsx";
 
 export function Cabinas() {
 
@@ -51,7 +52,7 @@ export function Cabinas() {
                 </div>
                 {/* seccion de la tarejta e imagen de la cabina */}
                 <h1 className="text-center font-outfit text-2xl font-medium py-[0.813rem] md:hidden">{cabinaEscogida.titulo}</h1>
-                <div className="relative flex justify-start lg:justify-center" onClick={manejarClick}>
+                <div className="relative flex justify-start lg:justify-center xl:justify-start" onClick={manejarClick} role="button">
                     <img
                         className={`w-[70vw] md:w-[60vw] lg:w-[45vw] transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10 transform  md:translate-x-24'}`}
                         src={imagenes[indiceActual]}
@@ -73,7 +74,7 @@ export function Cabinas() {
                     </div>
                 </div>
 
-                {/* selector de la capacidad de la cabina */}
+                {/* selector de la capacidad de la cabina movil*/}
                 <section className="flex justify-center items-center gap-x-[0.938rem] py-[1.625rem] lg:hidden">
                     <h1 className="font-outfit text-links font-medium">Personas:</h1>
                     <Cantidad setter={setCapacidad} text='3-4' isActive={activeCap} />
@@ -81,6 +82,15 @@ export function Cabinas() {
                     <Cantidad setter={setCapacidad} text='5-6*' isActive={activeCap} />
                     <Cantidad setter={setCapacidad} text='8-9' isActive={activeCap} />
                 </section>
+                
+                {/* selector de la capacidad de la cabina desktop*/}
+                <section className="justify-center items-center gap-x-[0.938rem] py-[1.625rem] hidden lg:flex">
+                    <CabinaCard setter={setActiveTab} text='3-4 Personas' isActive={activeTab} />
+                    <CabinaCard setter={setActiveTab} text='5-6 Personas' isActive={activeTab} />
+                    <CabinaCard setter={setActiveTab} text='5-6 Personas' isActive={activeTab} />
+                    <CabinaCard setter={setActiveTab} text='8-9 Personas' isActive={activeTab} />
+                </section>
+
 
                 <section className="lg:hidden">
                     <h1 className="font-outfit text-links font-medium">Descripción:</h1>

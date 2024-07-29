@@ -19,10 +19,11 @@ export function Header() {
       <h1 className='lg:hidden mb-[3.438rem] font-ovo text-subtitulo-btn'>Bienvenido</h1>
         <ul className='flex flex-col lg:flex-row gap-x-[3.125rem] gap-y-[2.875rem] font-outfit text-links text-left px-[1.5rem]'>
           <li className='flex gap-5'><img src={inicio} alt="" /><Link to="/" className='hover:underline underline-offset-4'>Inicio</Link></li>
-          <li className='flex gap-5'><img src={cabinas} alt="" /><Link to="/cabinas" className='hover:underline underline-offset-4'>Cabinas</Link></li>
-          <li className='flex gap-5'><img src={habitaciones} alt="" /><Link to="/habitaciones" className='hover:underline underline-offset-4'>Habitaciones</Link></li>
-          <li className='flex gap-5'><img src={nosotros} alt="" /><Link to="/sobre-nosotros" className='hover:underline underline-offset-4'>Sobre Nosotros</Link></li>
+          <li className='flex gap-5'><img src={cabinas} alt="" /><Link to="/cabinas" className='hover:underline underline-offset-4'>Hospedaje</Link></li>
+          {/* <li className='flex gap-5'><img src={habitaciones} alt="" /><Link to="/habitaciones" className='hover:underline underline-offset-4'>Habitaciones</Link></li> */}
+          <li className='flex gap-5'><img src={nosotros} alt="" /><Link to="/sobre-nosotros" className='hover:underline underline-offset-4'>Sobre nosotros</Link></li>
           <li className='flex gap-5'><img src={socios} alt="" /><Link to="/tiempo-compartido" className='hover:underline underline-offset-4'>Tiempo Compartido</Link></li>
+          <li className='flex gap-5'><img src={nosotros} alt="" /><Link to="/contacto" className='hover:underline underline-offset-4'>Contactenos</Link></li>
         </ul>
       </nav>
       {/* Boton que verifica el estado del check para abrir y cerrar el menu emergente */}
