@@ -23,7 +23,7 @@ export function Footer() {
             <section className='flex flex-col'>
 
                 {/* boton de escribenos */}
-                <a className='bg-blue-2 rounded-xl text-center font-outfit font-bold text-white text-subtitulo-btn tracking-wider px-[1.594rem] py-[0.625rem] mb-[3.063rem]' href=""><Link to="/contacto">Contáctenos</Link></a>
+                <a className='bg-blue-2 rounded-xl text-center font-outfit font-bold text-white text-subtitulo-btn tracking-wider px-[1.594rem] py-[0.625rem] mb-[3.063rem]' href="/contacto">Contáctenos</a>
 
                 <h3 className='font-outfit hidden lg:block text-white text-texto mb-4 font-bold tracking-wider'>Busquenos en:</h3>
                 <div className='flex gap-x-6 justify-center mb-[1.625rem] lg:mb-0'>
