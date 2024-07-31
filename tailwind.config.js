@@ -6,6 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/src/assets/imgs/cabina.jpg')",
+      },
+      width: {
+        'custom-img': 'clamp(300px, 60%, 600px)',
+      },
       colors: {
         'blue-1': '#2C5CA3',
         'blue-2': '#408DFF',

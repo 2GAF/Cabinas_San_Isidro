@@ -1,4 +1,5 @@
 import { Header } from "../common/Header.jsx";
+import { Footer } from "../common/Footer.jsx";
 import reservacion from "../assets/reservacion_icono.svg";
 import tiempo_compartido from "../assets/tiempo_compartido_icono.svg";
 import eventos from "../assets/eventos_icono.svg";
@@ -10,6 +11,8 @@ export function Contacto() {
         <>
             <div className="mx-[3.75rem] mt-[2.875rem]">
                 <Header />
+                    
+                </div>
                 <div className="flex flex-col justify-center items-center">
                     <h1 className="mb-6 font-ovo font-medium text-titulo items-center">Contáctenos</h1>
                 </div>
@@ -61,7 +64,7 @@ export function Contacto() {
                         </button>
                     </div>
                 </section>
-                <section className="mt-10 ">
+                <section className="mt-10 mb-8 mx-[3.75rem] ">
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="font-ovo text-titulo font-medium">Danos tu opinión</h1>
                         <h2 className="font-ovo text-subtitulo-btn font-medium">¡Conocer tu opinión es de suma importancia para nosotros!</h2>
@@ -97,7 +100,9 @@ export function Contacto() {
                         </form>
                     </div>
                 </section>
-            </div>
+                <div>
+                <Footer/>
+                </div>
         </>
     );
 }

@@ -38,12 +38,44 @@ export const useCabInfo = (activeCap) => {
         servicios: "TV, A/C",
         image: "foto"
       });
-    }else{
+    }else if (activeCap == '8-9') {
       setCabina({
         titulo: "Cabina para 9 personas",
         precio: "₡110.000 IVA.i",
         descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad repudiandae dolores excepturi perspiciatis blanditiis rem consequatur eveniet alias, cum sit voluptate accusamus optio hic dicta id tenetur? Perferendis, molestiae!",
         servicios: "TV, Abanico",
+        image: "foto"
+      });
+    }else if (activeCap == '1') {
+      setCabina({
+        titulo: "Habitacion para 1 persona",
+        precio: "₡25.000 IVA.i",
+        descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad repudiandae dolores excepturi perspiciatis blanditiis rem consequatur eveniet alias, cum sit voluptate accusamus optio hic dicta id tenetur? Perferendis, molestiae!",
+        servicios: "A/C, TV",
+        image: "foto"
+      });
+    }else if (activeCap == '2') {
+      setCabina({
+        titulo: "Habitacion para 2 persona",
+        precio: "₡36.000 IVA.i",
+        descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad repudiandae dolores excepturi perspiciatis blanditiis rem consequatur eveniet alias, cum sit voluptate accusamus optio hic dicta id tenetur? Perferendis, molestiae!",
+        servicios: "A/C, TV",
+        image: "foto"
+      });
+    }else if (activeCap == '3') {
+      setCabina({
+        titulo: "Habitacion para 3 persona",
+        precio: "₡42.000 IVA.i",
+        descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad repudiandae dolores excepturi perspiciatis blanditiis rem consequatur eveniet alias, cum sit voluptate accusamus optio hic dicta id tenetur? Perferendis, molestiae!",
+        servicios: "A/C, TV",
+        image: "foto"
+      });
+    }else {
+      setCabina({
+        titulo: "Habitacion para 4 persona",
+        precio: "₡47.000 IVA.i",
+        descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad repudiandae dolores excepturi perspiciatis blanditiis rem consequatur eveniet alias, cum sit voluptate accusamus optio hic dicta id tenetur? Perferendis, molestiae!",
+        servicios: "A/C, TV",
         image: "foto"
       });
     }
