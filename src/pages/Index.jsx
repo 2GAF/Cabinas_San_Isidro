@@ -23,10 +23,10 @@ export function Index() {
 
       </div>
       {/* Hero */}
-      <div className="relative mx-4 my-2 sm:mx-[3.75rem]">
-        <img src={hero_img} alt="Hotel & Cabinas San Isidro" className="w-full h-auto rounded-[2.5rem] " />
+      <div className="relative my-2 2xl:h-[60rem] xl:h-[50rem] lg:h-[40rem]">
+        <img src={hero_img} alt="Hotel & Cabinas San Isidro" className="object-cover w-full h-full" />
 
-        <div className="absolute inset-0 text-white flex items-center justify-center bg-black bg-opacity-50 rounded-[2.5rem]">
+        <div className="absolute inset-0 text-white flex items-center justify-center bg-black bg-opacity-50">
           <div className="mx-8 flex flex-col items-center justify-center">
 
             <h1 className="text-[clamp(30px,_7.3vw,_8rem)] text-center">Hotel & Cabinas San Isidro</h1>
@@ -37,7 +37,7 @@ export function Index() {
       {/* Hero */}
 
       {/* Opciones */}
-      <section className="mt-6 sm:mt-10">
+      <section className="mt-6 sm:mt-10 sm:mx-14 lg:mx-32">
         <h1 className="text-center text-[clamp(26px,_2.8vw,_3.438rem)]">Contamos con 2 opciones de reservación: </h1>
         <div className="flex justify-center mt-4 sm:mt-8">
           <Opcion setter={setActiveTab} text='Habitaciones' isActive={activeTab} />
@@ -47,13 +47,13 @@ export function Index() {
         </div>
         <div className="flex h-auto mt-12">
           {activeTab == 'Habitaciones' && (
-            <div className="fade-in grid sm:grid-cols-2 sm:gap-8 gap-4 sm:mx-0 sm:mr-8 mx-6">
-              <div className="bg-blue-1 p-3 sm:pl-0 rounded-lg ">
-                <img className="w-[133rem] sm:h-[25rem] h-[19rem] object-cover rounded-xl" src={habitaciones} alt="Imagen habitaciones" />
+            <div className="fade-in grid md:grid-cols-3 sm:gap-8 gap-4 sm:mx-0 mx-6">
+              <div className="col-start-1 col-end-3">
+                <img className="w-[133rem] object-cover rounded-xl h-full" src={habitaciones} alt="Imagen habitaciones" />
               </div>
-              <div className="flex flex-col justify-center ">
+              <div className="flex flex-col justify-center col-start-1 col-end-3 md:col-start-3 md:col-end-4">
                 <h3 className="text-[clamp(26px,_2.8vw,_3.438rem)] text-blue-1">Habitaciones</h3>
-                <p className="font-outfit text-[clamp(16px,_1.7vw,_34px)]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, porro quo. Consectetur nam voluptatum in blanditiis recusandae odio voluptates earum magnam quia? Illo praesentium neque ipsum? Quod non nesciunt atque!</p>
+                <p className="font-outfit text-[clamp(16px,_1.7vw,_22.66px)]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, porro quo. Consectetur nam voluptatum in blanditiis recusandae odio voluptates earum magnam quia? Illo praesentium neque ipsum? Quod non nesciunt atque!</p>
                 <div>
                   <Link to="/habitaciones" className="block text-center text-[clamp(16px,_1.7vw,_34px)] bg-blue-1 py-4 text-white w-full rounded-2xl mt-4">Ver más</Link>
                 </div>
@@ -61,17 +61,19 @@ export function Index() {
             </div>
           )}
           {activeTab == 'Cabinas' && (
-            <div className="fade-out grid sm:grid-cols-2 sm:gap-8 gap-4 sm:mx-0 sm:ml-8 mx-6">
-              <div className="bg-blue-1 p-3 rounded-lg block sm:hidden">
-                <img className="w-[133rem] sm:h-[25rem] h-[19rem] object-cover rounded-xl" src={habitaciones} alt="Imagen habitaciones" />
+            <div className="fade-out grid md:grid-cols-3 sm:gap-8 gap-4 sm:mx-0 mx-6">
+              <div className="col-start-1 col-end-3 block md:hidden">
+                <img className="w-[133rem] object-cover rounded-xl h-full" src={habitaciones} alt="Imagen habitaciones" />
               </div>
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center col-start-1 col-end-3 md:col-start-1 md:col-end-2">
                 <h3 className="text-[clamp(26px,_2.8vw,_3.438rem)] text-blue-1">Cabinas</h3>
-                <p className="font-outfit text-[clamp(16px,_1.7vw,_34px)]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, porro quo. Consectetur nam voluptatum in blanditiis recusandae odio voluptates earum magnam quia? Illo praesentium neque ipsum? Quod non nesciunt atque!</p>
-                <Link to="/cabinas" className="block text-center text-[clamp(16px,_1.7vw,_34px)] bg-blue-1 py-4 text-white w-full rounded-2xl mt-4">Ver más</Link>
+                <p className="font-outfit text-[clamp(16px,_1.7vw,_22.66px)]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, porro quo. Consectetur nam voluptatum in blanditiis recusandae odio voluptates earum magnam quia? Illo praesentium neque ipsum? Quod non nesciunt atque!</p>
+                <div>
+                  <Link to="/habitaciones" className="block text-center text-[clamp(16px,_1.7vw,_34px)] bg-blue-1 py-4 text-white w-full rounded-2xl mt-4">Ver más</Link>
+                </div>
               </div>
-              <div className="bg-blue-1 p-3 sm:pr-0 rounded-lg hidden sm:block">
-                <img className="w-[133rem] h-[25rem] object-cover rounded-xl" src={habitaciones} alt="Imagen habitaciones" />
+              <div className="col-start-2 md:col-end-4">
+                <img className="w-[133rem] object-cover rounded-xl h-full hidden md:block" src={habitaciones} alt="Imagen habitaciones" />
               </div>
             </div>
 
@@ -81,18 +83,18 @@ export function Index() {
       {/* Opciones */}
 
       {/* Servicios ofrecidos */}
-      <section className="mt-6 sm:mt-10 mx-4 sm:mx-[3.75rem] mb-8">
+      <section className="mt-6 sm:mt-10 mx-6 sm:mx-14 lg:mx-32 mb-8">
         <h2 className="text-center text-[clamp(26px,_2.8vw,_3.438rem)]">Servicios Ofrecidos:</h2>
           <Carrusel />
-          <div className="flex justify-around mt-4">
-            <Caracteristica icon={icon_parqueo} texto={'Parqueo Interno'}/>
-            <Caracteristica icon={icon_zonas} texto={'Zonas Verdes'}/>
-            <Caracteristica icon={icon_mar} texto={'Frente al mar'}/>
-            <Caracteristica icon={icon_piscina} texto={'Cinco piscinas'}/>
-          </div>
+        <div className="flex justify-around mt-4">
+          <Caracteristica icon={icon_parqueo} texto={'Parqueo Interno'} />
+          <Caracteristica icon={icon_zonas} texto={'Zonas Verdes'} />
+          <Caracteristica icon={icon_mar} texto={'Frente al mar'} />
+          <Caracteristica icon={icon_piscina} texto={'Cinco piscinas'} />
+        </div>
       </section>
       {/* Servicios ofrecidos */}
-      <Footer/>
+      <Footer />
     </div>
   )
 }
