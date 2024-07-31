@@ -12,27 +12,25 @@ import img6 from '../assets/6.jpg'
 
 export function Carrusel() {
 
+  const imgs = [
+    { id: 1, img: img1 },
+    { id: 2, img: img2 },
+    { id: 3, img: img3 },
+    { id: 4, img: img4 },
+    { id: 5, img: img5 },
+    { id: 6, img: img6 },
+  ]
+
   return (
-    
-    <Carousel showThumbs={false} showArrows={true} autoPlay={true} interval={1000} infiniteLoop={true} stopOnHover={false}>
-      <div className='h-full'>
-        <img className='h-full object-cover object-center' src={img1} alt="Legend 1" />
-      </div>
-      <div className='h-full'>
-        <img className='h-full object-cover object-center' src={img2} alt="Legend 2" />
-      </div>
-      <div className='h-full'>
-        <img className='h-full object-cover object-center' src={img3} alt="Legend 3" />
-      </div>
-      <div className='h-full'>
-        <img className='h-full object-cover object-center' src={img4} alt="Legend 4" />
-      </div>
-      <div className='h-full'>
-        <img className='h-full object-cover object-center' src={img5} alt="Legend 5" />
-      </div>
-      <div className='h-full'>
-        <img className='h-full object-cover object-center' src={img6} alt="Legend 6" />
-      </div>
+
+    <Carousel showThumbs={false} showArrows={true} autoPlay={true} interval={2000} infiniteLoop={true} stopOnHover={false}>
+      {imgs.map(element => 
+        (
+          <div key={element.id} className='xl:h-[55rem] md:h-[30rem] sm:[20rem]'>
+            <img className='xl:h-[55rem] md:h-[40rem] sm:[40rem] object-cover object-center' src={element.img} alt="Legend 1" />
+          </div>
+        )
+      )}
     </Carousel>
   );
 }
