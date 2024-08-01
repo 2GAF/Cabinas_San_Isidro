@@ -4,8 +4,8 @@ export function Terminos({ isOpen, onClose }) {
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 ove">
-            <div className="bg-white py-8 sm:px-8 px-14 rounded-[45px] h-[93%] w-[90%] sm:w-[65%] justify-center items-center  flex flex-col">
+        <div className="fixed inset-0 z-10 flex items-center justify-center bg-black bg-opacity-50 ove">
+            <div className="bg-white py-8 sm:px-8 px-14 rounded-[45px] h-[93%] w-[90%] sm:w-[65%] justify-center items-center flex flex-col">
                 <h1 className="text-[clamp(30px,_3.9vw,_76px)] font-ovo mb-4">Políticas y condiciones de uso</h1>
                 <hr className='w-80 sm:w-[850px] border-[3px] border-blue-1 rounded-3xl mb-8' />
                 <div className='overflow-y-auto mb-4'>
