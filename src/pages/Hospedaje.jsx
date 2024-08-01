@@ -10,11 +10,10 @@ import tvBlue from "../assets/tvBlack.svg";
 import { useCabInfo } from "../hooks/useCabInfo.js";
 import { CabinaCard } from "../buttons/CabinaCard.jsx";
 
-export function Cabinas() {
+export function Hospedaje() {
 
     const [activeTab, setActiveTab] = useState('Cabinas');
     const [activeCap, setCapacidad] = useState('3-4');
-    console.log(activeCap);
     const { cabinaEscogida } = useCabInfo(activeCap);
 
     //inidica cuando tarjeta esta al frente
@@ -83,10 +82,10 @@ export function Cabinas() {
 
                     {/* selector de la capacidad de la cabina desktop */}
                     <section className="justify-center items-center gap-x-[0.938rem] py-[1.625rem] hidden lg:flex">
-                        <CabinaCard setter={setActiveTab} text='3-4 Personas' isActive={activeTab} />
-                        <CabinaCard setter={setActiveTab} text='5-6 Personas' isActive={activeTab} />
-                        <CabinaCard setter={setActiveTab} text='5-6* Personas' isActive={activeTab} />
-                        <CabinaCard setter={setActiveTab} text='8-9 Personas' isActive={activeTab} />
+                        <CabinaCard setter={setCapacidad} text='3-4 Personas' isActive={activeCap} />
+                        <CabinaCard setter={setCapacidad} text='5-6 Personas' isActive={activeCap} />
+                        <CabinaCard setter={setCapacidad} text='5-6* Personas' isActive={activeCap} />
+                        <CabinaCard setter={setCapacidad} text='8-9 Personas' isActive={activeCap} />
                     </section>
 
 
@@ -119,7 +118,7 @@ export function Cabinas() {
                         <div className=" w-custom-img relative py-3w" onClick={manejarClick} role="button">
                             <img className={` transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
                             <div
-                                className={`absolute top-5 lg:top-16 left-[-2rem] md:left-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[22.375rem] md:h-[20.375rem] lg:w-[20rem] md:top-2 bg-red-700 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 -transform translate-x-0 ' : 'z-[-10] transform translate-x-10'}`}
+                                className={`absolute top-5 lg:top-16 left-[-2rem] md:left-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[22.375rem] md:h-[20.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 -transform translate-x-0 ' : 'z-[-10] transform translate-x-10'}`}
                             >
                                 <div className="px-[0.626rem] flex flex-col gap-y-[0.625rem]">
                                     <h1 className="text-3xl font-medium hidden md:block">{cabinaEscogida.titulo}</h1>
@@ -146,10 +145,10 @@ export function Cabinas() {
 
                     {/* selector de la capacidad de la cabina desktop */}
                     <section className="justify-center items-center gap-x-[0.938rem] py-[1.625rem] hidden lg:flex">
-                        <CabinaCard setter={setActiveTab} text='1 Persona' isActive={activeTab} />
-                        <CabinaCard setter={setActiveTab} text='2 Personas' isActive={activeTab} />
-                        <CabinaCard setter={setActiveTab} text='3 Personas' isActive={activeTab} />
-                        <CabinaCard setter={setActiveTab} text='4 Personas' isActive={activeTab} />
+                        <CabinaCard setter={setCapacidad} text='1 Persona' isActive={activeCap} />
+                        <CabinaCard setter={setCapacidad} text='2 Personas' isActive={activeCap} />
+                        <CabinaCard setter={setCapacidad} text='3 Personas' isActive={activeCap} />
+                        <CabinaCard setter={setCapacidad} text='4 Personas' isActive={activeCap} />
                     </section>
 
 
