@@ -44,7 +44,7 @@ export function Footer() {
                      <li className='hover:underline underline-offset-4'><button onClick={openModal}>Políticas de uso</button></li>
                     <li className='hover:underline hover underline-offset-4'><Link to="/" >Dirección</Link></li>
                     <li className='hover:underline hover underline-offset-4'><Link to="/" >Quiénes somos</Link></li>
-                    <li className='hover:underline hover underline-offset-4'><Link to="/" >Eventos y excursiones</Link></li>
+                    <li className='hover:underline hover underline-offset-4'><a href="contacto">Eventos y excursiones</a></li>
                 </ul>
             </nav>
             {/* Derechos reservados y desarrollo */}

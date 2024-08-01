@@ -21,7 +21,7 @@ export function Header() {
           <li className='flex gap-5'><img src={cabinas} alt="" /><Link to="/hospedaje" className='hover:underline underline-offset-4'>Hospedaje</Link></li>
           <li className='flex gap-5'><img src={nosotros} alt="" /><Link to="/sobre-nosotros" className='hover:underline underline-offset-4'>Sobre nosotros</Link></li>
           <li className='flex gap-5'><img src={socios} alt="" /><Link to="/tiempo-compartido" className='hover:underline underline-offset-4'>Tiempo Compartido</Link></li>
-          <li className='flex gap-5'><img src={nosotros} alt="" /><Link to="/contacto" className='hover:underline underline-offset-4'>Contactenos</Link></li>
+          <li className='flex gap-5'><img src={nosotros} alt="" /><Link to="/contacto" className='hover:underline underline-offset-4'>Contáctenos</Link></li>
         </ul>
       </nav>
       {/* Boton que verifica el estado del check para abrir y cerrar el menu emergente */}
