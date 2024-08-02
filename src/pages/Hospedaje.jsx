@@ -40,6 +40,14 @@ export function Hospedaje() {
         setTarjetaAlFrente(!tarjetaAlFrente);
     };
 
+    useEffect(() => {
+        if (activeTab === 'Cabinas') {
+            setCapacidad('3-4');
+        } else {
+            setCapacidad('1');
+        }
+    }, [activeTab]);
+
     return (
         <div>
             <Header />
@@ -61,9 +69,9 @@ export function Hospedaje() {
                                     <h1 className="text-3xl font-medium hidden md:block">{cabinaEscogida.titulo}</h1>
                                     <h1 className="text-xl font-bold md:font-light">{cabinaEscogida.precio}</h1>
                                     <p className="font-outfit text-base hidden md:block">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad repudiandae dolores excepturi perspiciatis blanditiis rem consequatur eveniet alias, cum sit voluptate accusamus optio hic dicta id tenetur? Perferendis, molestiae!
+                                    {cabinaEscogida.descripcion}
                                     </p>
-                                    <p className="text-center text-base font-light md:hidden">Lorem ipsum dolor sit amet. Ex voluptatem autem ut suscipit</p>
+                                    <p className="text-center text-base font-light md:hidden">Ideal para las familias pequeñas y grandes.</p>
                                     <a href="/"><div className="bg-white rounded-xl py-[0.313rem] flex justify-center text-blue-1 text-ovo text-base">Reservar</div></a>
 
                                 </div>
@@ -91,7 +99,7 @@ export function Hospedaje() {
 
                     <section className="md:hidden">
                         <h1 className="font-outfit text-links font-medium">Descripción:</h1>
-                        <p className="font-outfit text-base md:hidden">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad repudiandae dolores excepturi perspiciatis blanditiis rem consequatur eveniet alias, cum sit voluptate accusamus optio hic dicta id tenetur? Perferendis, molestiae!</p>
+                        <p className="font-outfit text-base md:hidden">{cabinaEscogida.descripcion}</p>
 
                         <div className="flex gap-x-[0.938rem] py-[0.813rem]">
                             <h1 className="font-outfit text-links font-medium">Servicios:</h1>
@@ -124,9 +132,9 @@ export function Hospedaje() {
                                     <h1 className="text-3xl font-medium hidden md:block">{cabinaEscogida.titulo}</h1>
                                     <h1 className="text-xl font-bold md:font-light">{cabinaEscogida.precio}</h1>
                                     <p className="font-outfit text-base hidden md:block">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad repudiandae dolores excepturi perspiciatis blanditiis rem consequatur eveniet alias, cum sit voluptate accusamus optio hic dicta id tenetur? Perferendis, molestiae!
+                                    {cabinaEscogida.descripcion}
                                     </p>
-                                    <p className="text-center text-base font-light md:hidden">Lorem ipsum dolor sit amet. Ex voluptatem autem ut suscipit</p>
+                                    <p className="text-center text-base font-light md:hidden ">Ideal para parejas y trabajadores.</p>
                                     <a href="/"><div className="bg-white rounded-xl py-[0.313rem] flex justify-center text-blue-1 text-ovo text-base">Reservar</div></a>
 
                                 </div>
@@ -145,7 +153,7 @@ export function Hospedaje() {
 
                     {/* selector de la capacidad de la cabina desktop */}
                     <section className="justify-center items-center gap-x-[0.938rem] py-[1.625rem] hidden lg:flex">
-                        <CabinaCard setter={setCapacidad} text='1 Persona' isActive={activeCap} />
+                        <CabinaCard setter={setCapacidad} text='1 Personas' isActive={activeCap} />
                         <CabinaCard setter={setCapacidad} text='2 Personas' isActive={activeCap} />
                         <CabinaCard setter={setCapacidad} text='3 Personas' isActive={activeCap} />
                         <CabinaCard setter={setCapacidad} text='4 Personas' isActive={activeCap} />
@@ -154,7 +162,7 @@ export function Hospedaje() {
 
                     <section className="md:hidden">
                         <h1 className="font-outfit text-links font-medium">Descripción:</h1>
-                        <p className="font-outfit text-base md:hidden">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad repudiandae dolores excepturi perspiciatis blanditiis rem consequatur eveniet alias, cum sit voluptate accusamus optio hic dicta id tenetur? Perferendis, molestiae!</p>
+                        <p className="font-outfit text-base md:hidden">{cabinaEscogida.descripcion}</p>
 
                         <div className="flex gap-x-[0.938rem] py-[0.813rem]">
                             <h1 className="font-outfit text-links font-medium">Servicios:</h1>
