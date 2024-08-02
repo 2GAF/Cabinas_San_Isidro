@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+ /** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -28,9 +28,9 @@ export default {
         'header': '8rem',
         'sub-header': '2.66rem',
         //fuentes para el contenido
-        'titulo': '3.438rem',
-        'subtitulo-btn': '2.124rem',
-        'texto': '1.313rem',
+        'titulo': '2.875rem',
+        'subtitulo-btn': '2.292rem',
+        'texto': '1.416rem',
         //fuentes para el footer
         'titulos-footer': '2.023rem',
         'links': '1.25rem',
