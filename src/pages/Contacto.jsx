@@ -58,7 +58,7 @@ export function Contacto() {
                         </ul>
                     </div>
                     <button className="">
-                        <a href="https://wa.me/message/2L3HZKN2TOSSO1">
+                        <a href="https://wa.me/message/ZGYH7OW6HZAEN1">
                             <img className="absolute right-[25px]  bottom-[25px] sm:bottom-[18px] size-16 sm:size-20" src={whatsapp} alt="Whatsapp Icon" />
                         </a>
                     </button>
@@ -74,7 +74,7 @@ export function Contacto() {
                         </ul>
                     </div>
                     <button>
-                        <a href="https://wa.me/message/2L3HZKN2TOSSO1">
+                        <a href="https://wa.me/+50683904884/">
                             <img className="absolute right-[25px]  bottom-[25px] sm:bottom-[18px] size-16 sm:size-20" src={whatsapp} alt="Whatsapp Icon" />
                         </a>
                     </button>
@@ -92,7 +92,7 @@ export function Contacto() {
                         </ul>
                     </div>
                     <button>
-                        <a href="https://wa.me/message/2L3HZKN2TOSSO1">
+                        <a href="https://wa.me/+50687777774/">
                             <img className="absolute right-[25px]  bottom-[25px] sm:bottom-[18px] size-16 sm:size-20" src={whatsapp} alt="Whatsapp Icon" />
                         </a>
                     </button>

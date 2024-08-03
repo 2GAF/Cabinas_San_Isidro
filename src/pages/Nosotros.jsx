@@ -72,7 +72,13 @@ export function Nosotros() {
                     <div className="flex flex-col md:flex-row justify-center items-center  rounded-lg mt-[4vw] mb-[2vh] lg:mb-[4vw] ">
                         {/* Map Image */}
                         <div className="w-full md:w-1/2 ">
-                            <img src={Mapa} alt="Map" className="w-full  rounded-lg " />
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1964.7468813698372!2d-84.75954332166081!3d9.976009719614972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa031c10571ce39%3A0xb5e2acd58bbe21b2!2sCabinas%20San%20Isidro!5e0!3m2!1ses-419!2scr!4v1722641061111!5m2!1ses-419!2scr"
+                                className="rounded-[30px] w-[629px] h-[407px]"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
                         </div>
                         {/* Contact Details */}
                         <div className="w-full md:w-1/2 md:pl-6 mb-[4vh]">
@@ -86,7 +92,9 @@ export function Nosotros() {
                                 <p className="text-[2.5vw]">csisidro@gmail.com</p>
                             </div>
                             <button className=" mt-[2vh] w-full lg:h-[4vw] h-[6vh] bg-[#2C5CA3] text-white py-2 px-4 rounded-lg">
-                                ¿Cómo llegar?
+                                <a href="https://maps.app.goo.gl/1K1rD7LfnasMzchg8">
+                                    ¿Cómo llegar?
+                                </a>
                             </button>
                         </div>
                     </div>
