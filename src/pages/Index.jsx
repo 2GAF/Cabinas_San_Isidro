@@ -55,7 +55,7 @@ export function Index() {
                 <h3 className="text-[clamp(26px,_2.8vw,_3.438rem)] text-blue-1">Habitaciones</h3>
                 <p className="font-outfit text-[clamp(16px,_1.7vw,_22.66px)]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, porro quo. Consectetur nam voluptatum in blanditiis recusandae odio voluptates earum magnam quia? Illo praesentium neque ipsum? Quod non nesciunt atque!</p>
                 <div>
-                  <Link to="/Hospedaje" className="block text-center text-[clamp(16px,_1.7vw,_34px)] bg-blue-1 py-4 text-white w-full rounded-2xl mt-4">Ver más</Link>
+                  <Link to="/Hospedaje" className="block text-center text-[clamp(16px,_1.7vw,_34px)] bg-blue-1 py-4 font-outfit text-white w-full rounded-2xl mt-4">Ver más</Link>
                 </div>
               </div>
             </div>
