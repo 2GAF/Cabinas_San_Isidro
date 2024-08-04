@@ -43,7 +43,7 @@ export function Footer() {
                 <ul className='ml-5 lg:list-disc grid grid-cols-2 md:flex gap-x-5 lg:block font-outfit text-white lg:text-base leading-loose'>
                      <li className='hover:underline underline-offset-4'><button onClick={openModal}>Políticas de uso</button></li>
                     <li className='hover:underline hover underline-offset-4'><a href="https://maps.app.goo.gl/1K1rD7LfnasMzchg8" >Dirección</a></li>
-                    <li className='hover:underline hover underline-offset-4'><a href="sobre-nosotros" >Quiénes somos</a></li>
+                    <li className='hover:underline hover underline-offset-4'><Link to="/sobre-nosotros">Quiénes somos</Link></li>
                     <li className='hover:underline hover underline-offset-4'><a href="https://wa.me/+50687777774/">Eventos y excursiones</a></li>
                 </ul>
             </nav>

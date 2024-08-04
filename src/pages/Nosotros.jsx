@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Mision from "../assets/Mision.svg";
 import Vision from "../assets/Vision.svg";
 import Valores from "../assets/Valores.svg";
@@ -10,13 +11,17 @@ import Telefono from "../assets/Telefono.png";
 import { Footer } from "../common/Footer";
 
 export function Nosotros() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+      
     return (
         <div>
-            <div className="font-ovo mx-4 mb-3vh ">
-                <div className="my-[2.875rem] sm:mx-[3.75rem]">
+            <div className="font-ovo mb-3vh ">
+                <div className=" mx-4 my-[2.875rem] sm:mx-[3.75rem]">
                     <Header />
                 </div>
-
                 <div className="mx-4 sm:mx-[3.75rem]">
                     <div className="flex flex-col lg:grid lg:grid-cols-2 lg:items-start gap-[25px]">
                         <div className="flex sm:order-1 order-2 justify-center items-center w-full my-auto">
