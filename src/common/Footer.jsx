@@ -1,8 +1,8 @@
 import logo from '../assets/CSIlogo.svg';
 import whatsfoot from '../assets/whatsappFoot.svg';
-import twitfoot from '../assets/twitterFoot.svg';
 import facefoot from '../assets/facebookFoot.svg';
 import instafoot from '../assets/instagramFoot.svg';
+import tiktokfoot from '../assets/tiktokfoot.svg';
 import { Link } from 'react-router-dom';
 import { Terminos } from '../pages/Terminos';
 import React, { useState } from 'react';
@@ -29,9 +29,9 @@ export function Footer() {
                 <div className='flex gap-x-6 justify-center mb-[1.625rem] lg:mb-0'>
                     {/* enlaces a las redes sociales */}
                     <a href="https://www.facebook.com/cabinassanisidro"><img src={facefoot} alt="" /></a>
-                    <a href=""><img src={whatsfoot} alt="" /></a>
-                    <a href=""><img src={instafoot} alt="" /></a>
-                    <a href=""><img src={twitfoot} alt="" /></a>
+                    <a href="https://wa.me/message/ZGYH7OW6HZAEN1"><img src={whatsfoot} alt="" /></a>
+                    <a href="https://www.instagram.com/cabinas_san_isidro?igsh=cXRxY2xoMGZ4bXZr"><img src={instafoot} alt="" /></a>
+                    <a href="https://www.tiktok.com/@cabinas_san_isidro?is_from_webapp=1&sender_device=pc"><img src={tiktokfoot} alt="" /></a>
                 </div>
             </section>
 
@@ -42,9 +42,9 @@ export function Footer() {
                 {/* lista de enlaces */}
                 <ul className='ml-5 lg:list-disc grid grid-cols-2 md:flex gap-x-5 lg:block font-outfit text-white lg:text-base leading-loose'>
                      <li className='hover:underline underline-offset-4'><button onClick={openModal}>Políticas de uso</button></li>
-                    <li className='hover:underline hover underline-offset-4'><Link to="/" >Dirección</Link></li>
-                    <li className='hover:underline hover underline-offset-4'><Link to="/" >Quiénes somos</Link></li>
-                    <li className='hover:underline hover underline-offset-4'><a href="contacto">Eventos y excursiones</a></li>
+                    <li className='hover:underline hover underline-offset-4'><a href="https://maps.app.goo.gl/1K1rD7LfnasMzchg8" >Dirección</a></li>
+                    <li className='hover:underline hover underline-offset-4'><a href="sobre-nosotros" >Quiénes somos</a></li>
+                    <li className='hover:underline hover underline-offset-4'><a href="https://wa.me/+50687777774/">Eventos y excursiones</a></li>
                 </ul>
             </nav>
             {/* Derechos reservados y desarrollo */}

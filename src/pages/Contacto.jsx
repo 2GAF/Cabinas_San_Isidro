@@ -17,14 +17,6 @@ export function Contacto() {
 
         const tarjetas = [
             {
-                image: eventosimg,
-                icon: eventos,
-                title: 'Eventos especiales',
-                email: 'csisidro@gmail.com',
-                phone: '+506 2663-2170',
-                link: 'https://wa.me/+50687777774/'
-            },
-            {
                 image: reservacionimg,
                 icon: reservacion,
                 title: 'Reservaciones',
@@ -32,6 +24,7 @@ export function Contacto() {
                 phone: '+506 2663 0031',
                 link: 'https://wa.me/message/ZGYH7OW6HZAEN1'
             },
+
             {
                 image: tiempo_compartidoimg,
                 icon: tiempo_compartido,
@@ -39,7 +32,15 @@ export function Contacto() {
                 email: 'socioscsi@gmail.com',
                 phone: '+506 8390 4884',
                 link: 'https://wa.me/+50683904884/'
-            }
+            },
+            {
+                image: eventosimg,
+                icon: eventos,
+                title: 'Eventos especiales',
+                email: 'csisidro@gmail.com',
+                phone: '+506 2663-2170',
+                link: 'https://wa.me/+50687777774/'
+            },
         ];
 
         const [formData, setFormData] = useState({
@@ -84,7 +85,7 @@ export function Contacto() {
                         ))}
                     </div>
                 </section>
-                <section className="mt-10 mb-8 mx-[3.75rem] ">
+                <section className="mt-10 mb-8 mx-[3.75rem] sm:mx-[10rem]">
                     <div className="flex flex-col justify-center text-center items-center">
                         <h1 className="font-ovo text-[clamp(36px,_3.9vw,_76px)] font-regular">Danos tu opinión</h1>
                         <h2 className="font-ovo text-[clamp(26px,_2.8vw,_55px)] font-medium">¡Conocer tu opinión es de suma importancia para nosotros!</h2>
@@ -94,13 +95,13 @@ export function Contacto() {
                             <div className="grid grid-cols-1 sm:grid-cols-4 justify-between">
                                 <div className="grid order-2 sm:order-1 sm:col-start-1 sm:col-end-4">
                                     <div className="mb-4 sm:mb-0">
-                                        <input className="w-full pl-4 py-4 sm:py-8 border-4 border-blue-1 rounded-[33px] focus:outline-none focus:shadow-outline font-outfit text-[clamp(16px,_1.7vw,_22.66px)] text-gray-1" id="nombre" type="text" placeholder="Nombre Completo" onChange={handleChange} />
+                                        <input className="w-full pl-4 py-4 sm:py-8 border-2 border-blue-1  rounded-[10px] sm:rounded-[33px] focus:outline-none focus:shadow-outline font-outfit text-[clamp(16px,_1.7vw,_22.66px)] text-gray-1" id="nombre" type="text" placeholder="Nombre Completo" onChange={handleChange} />
                                     </div>
                                     <div className="mb-4 sm:mb-0">
-                                        <input className="w-full pl-4 py-4 sm:py-8 border-4 border-blue-1 rounded-[33px] focus:outline-none focus:shadow-outline font-outfit text-[clamp(16px,_1.7vw,_22.66px)] text-gray-1" id="telefono" type="tel" placeholder="Número de teléfono" onChange={handleChange} />
+                                        <input className="w-full pl-4 py-4 sm:py-8 border-2 border-blue-1 rounded-[10px] sm:rounded-[33px] focus:outline-none focus:shadow-outline font-outfit text-[clamp(16px,_1.7vw,_22.66px)] text-gray-1" id="telefono" type="tel" placeholder="Número de teléfono" onChange={handleChange} />
                                     </div>
                                     <div className="">
-                                        <input className="w-full pl-4 py-4 sm:py-8 border-4 border-blue-1 rounded-[33px] focus:outline-none focus:shadow-outline font-outfit text-[clamp(16px,_1.7vw,_22.66px)] text-gray-1" id="correo" type="email" placeholder="Correo Electrónico" onChange={handleChange} />
+                                        <input className="w-full pl-4 py-4 sm:py-8 border-2 border-blue-1  rounded-[10px] sm:rounded-[33px] focus:outline-none focus:shadow-outline font-outfit text-[clamp(16px,_1.7vw,_22.66px)] text-gray-1" id="correo" type="email" placeholder="Correo Electrónico" onChange={handleChange} />
                                     </div>
                                 </div>
                                 <div className="grid items-center sm:order-2 order-1 mb-6 sm:mb-0 sm:col-start-4 ml-6">
@@ -108,10 +109,10 @@ export function Contacto() {
                                 </div>
                             </div>
                             <div className="mb-6 mt-4">
-                                <textarea className="w-full pl-4 py-4 border-4 border-blue-1 rounded-[33px] focus:outline-none focus:shadow-outline font-outfit text-[clamp(16px,_1.7vw,_22.66px)] text-gray-1 text-start" id="mensaje" placeholder="Mensaje...." rows="4" onChange={handleChange}></textarea>
+                                <textarea className="w-full pl-4 py-4 border-2 border-blue-1 rounded-[10px] sm:rounded-[33px] focus:outline-none focus:shadow-outline font-outfit text-[clamp(16px,_1.7vw,_22.66px)] text-gray-1 text-start" id="mensaje" placeholder="Mensaje...." rows="4" onChange={handleChange}></textarea>
                             </div>
                             <div className="flex items-center justify-between">
-                                <button className="w-full bg-blue-1 hover:bg-blue-900 text-white font-bold font-outfit  py-4 sm:py-6 px-4 rounded-full focus:outline-none focus:shadow-outline" type="submit">
+                                <button className="w-full text-[clamp(16px,_1.7vw,_34px)] bg-blue-1 hover:bg-blue-900 text-white font-bold font-outfit  py-4 sm:py-6 px-4 rounded-full focus:outline-none focus:shadow-outline" type="submit">
                                     Enviar
                                 </button>
                             </div>
