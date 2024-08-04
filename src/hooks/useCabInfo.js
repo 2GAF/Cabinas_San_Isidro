@@ -14,6 +14,10 @@ import c94 from "../assets/imgs/C9.4.jpg";
 import c95 from "../assets/imgs/C9.5.jpg";
 import c96 from "../assets/imgs/C9.6.jpg";
 import c97 from "../assets/imgs/C9.7.jpg";
+import h1 from "../assets/imgs/H1.jpg";
+import h2 from "../assets/imgs/H2.jpg";
+import h3 from "../assets/imgs/H3.jpg";
+import h4 from "../assets/imgs/H4.jpg";
 
 // Información de las cabinas
 const cabinasInfo = {
@@ -45,25 +49,25 @@ const cabinasInfo = {
     titulo: "Habitación para 1 persona",
     precio: "₡25.000 IVA.i",
     descripcion: "Habitación sencilla con aire acondicionado y televisión, cuenta con una cama matrimonial y paños",
-    image: "foto"
+    image: [h1, h2, h3, h4],
   },
   '2': {
     titulo: "Habitación para 2 personas",
     precio: "₡36.000 IVA.i",
     descripcion: "Habitación sencilla con aire acondicionado y televisión, cuenta con una cama matrimonial y paños",
-    image: "foto"
+    image: [h1, h2, h3, h4],
   },
   '3': {
     titulo: "Habitación para 3 personas",
     precio: "₡42.000 IVA.i",
     descripcion: "Habitación sencilla con aire acondicionado y televisión, cuenta con una cama matrimonial, una cama individual y paños",
-    image: "foto"
+    image: [h1, h2, h3, h4],
   },
   'default': {
     titulo: "Habitación para 4 personas",
     precio: "₡47.000 IVA.i",
     descripcion: "Habitación sencilla con aire acondicionado y televisión, cuenta con dos camas matrimoniales y paños",
-    image: "foto"
+    image: [h1, h2, h3, h4],
   }
 };
 
