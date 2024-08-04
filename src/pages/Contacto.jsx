@@ -78,57 +78,6 @@ export function Contacto() {
                     <h1 className="mb-6 font-ovo font-medium text-[clamp(36px,_3.9vw,_76px)] items-center">Contáctenos</h1>
                 </div>
                 <section className="flex flex-col justify-center items-center gap-[1.3rem] sm:gap-[3.125rem]">
-                    {/* <div className="flex flex-col sm:flex-row relative gap-x-4 sm:gap-x-[94px] pl-4 sm:pl-[107px] pr-4 sm:pr-[183px] pb-24 pt-10 sm:py-10 items-center border-[8px] border-blue-1 rounded-[79px] w-[350px] sm:w-full max-w-full sm:max-w-[1319px]">
-                    <img className="mb-4 sm:mb-0 size-20 sm:size-[10.5rem]" src={reservacion} alt="Icono_reservacion" />
-                    <hr className=" border-0 sm:border-4 border-blue-1 sm:h-[232px] rounded-3xl mx-4 sm:mx-10" />
-                    <div className="sm:text-start text-center">
-                        <h1 className="mb-4 font-outfit text-[clamp(26px,_2.8vw,_55px)] font-medium">Reservaciones y hospedaje</h1>
-                        <ul className="flex flex-col justify-start">
-                            <li className="mb-4 text-[clamp(16px,_1.7vw,_34px)] font-outfit font-light">Correo: csisidro@gmail.com</li>
-                            <li className="mb-4 text-[clamp(16px,_1.7vw,_34px)] font-outfit font-light">Telefono: +506 2663 0031</li>
-                            <li className="mb-4 text-[clamp(16px,_1.7vw,_34px)] font-outfit font-light">Whatsapp: +506 8813 6933</li>
-                        </ul>
-                    </div>
-                    <button className="">
-                        <a href="https://wa.me/message/ZGYH7OW6HZAEN1">
-                            <img className="absolute right-[25px]  bottom-[25px] sm:bottom-[18px] size-16 sm:size-20" src={whatsapp} alt="Whatsapp Icon" />
-                        </a>
-                    </button>
-                </div>
-                <div className="flex flex-col sm:flex-row relative gap-x-4 sm:gap-x-[94px] pl-4 sm:pl-[107px] pr-4 sm:pr-[183px] pb-24 pt-10 sm:py-10 items-center border-[8px] border-blue-1 rounded-[79px] w-[350px] sm:w-full max-w-full sm:max-w-[1319px]">
-                    <img className="mb-4 sm:mb-0 size-20 sm:size-[10.5rem]" src={tiempo_compartido} alt="tiempo_compartido_icono" />
-                    <hr className=" border-0 sm:border-4 border-blue-1 sm:h-[232px] rounded-3xl mx-4 sm:mx-10" />
-                    <div className="sm:text-start text-center">
-                        <h1 className="mb-4 font-outfit text-[clamp(26px,_2.8vw,_3.438rem)] font-medium">Tiempo compartido</h1>
-                        <ul className="flex flex-col justify-start">
-                            <li className="mb-4 text-[clamp(16px,_1.7vw,_34px)] font-outfit font-light">Correo: socioscsi@gmail.com</li>
-                            <li className="mb-4 text-[clamp(16px,_1.7vw,_34px)] font-outfit font-light">Whatsapp: +506 8390-4884</li>
-                        </ul>
-                    </div>
-                    <button>
-                        <a href="https://wa.me/+50683904884/">
-                            <img className="absolute right-[25px]  bottom-[25px] sm:bottom-[18px] size-16 sm:size-20" src={whatsapp} alt="Whatsapp Icon" />
-                        </a>
-                    </button>
-                </div>
-
-                <div className="flex flex-col sm:flex-row relative gap-x-4 sm:gap-x-[94px] pl-4 sm:pl-[107px] pr-4 sm:pr-[183px] pb-24 pt-10 sm:py-10 items-center border-[8px] border-blue-1 rounded-[79px] w-[350px] sm:w-full max-w-full sm:max-w-[1319px]">
-                    <img className="mb-4 sm:mb-0 size-20 sm:size-[10.5rem]" src={eventos} alt="eventos_icono" />
-                    <hr className=" border-0 sm:border-4 border-blue-1 sm:h-[232px] rounded-3xl mx-4 sm:mx-10" />
-                    <div className="sm:text-start text-center">
-                        <h1 className="mb-4 font-outfit text-[clamp(26px,_2.8vw,_3.438rem)] font-medium">Contrataciones para eventos</h1>
-                        <ul className="flex flex-col justify-start">
-                            <li className="mb-4 text-[clamp(16px,_1.7vw,_34px)] font-outfit font-light">Correo: csisidro@gmail.com</li>
-                            <li className="mb-4 text-[clamp(16px,_1.7vw,_34px)] font-outfit font-light">Telefono: +506 2663 2170</li>
-                            <li className="mb-4 text-[clamp(16px,_1.7vw,_34px)] font-outfit font-light">Whatsapp: +506 8777 7774</li>
-                        </ul>
-                    </div>
-                    <button>
-                        <a href="https://wa.me/+50687777774/">
-                            <img className="absolute right-[25px]  bottom-[25px] sm:bottom-[18px] size-16 sm:size-20" src={whatsapp} alt="Whatsapp Icon" />
-                        </a>
-                    </button>
-                </div> */}
                     <div className="flex flex-wrap justify-center p-4 ">
                         {tarjetas.map((tarjeta, index) => (
                             <Tarjeta key={index} {...tarjeta} />

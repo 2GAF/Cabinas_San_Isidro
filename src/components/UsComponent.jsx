@@ -11,7 +11,7 @@ export function UsComponent({ imageSrc, imageAlt, title, description, hasBorder 
           </div>
         </div>
         <div className="flex-1 justify-start">
-          <p className=" lg:mx-4 font-bold mt-2  lg:text-[clamp(12px,_1.5vw,_2.66rem)]">
+          <p className=" lg:mx-4 mt-2  lg:text-[clamp(12px,_1.5vw,_2.66rem)]">
             {description}
           </p>
         </div>
