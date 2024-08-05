@@ -92,7 +92,7 @@ export function Contacto() {
                     ))}
                 </div>
             </section>
-            <section className="mt-10 mb-8 mx-[3.75rem] sm:mx-[10rem]">
+            <section className="mt-10 mb-8 mx-[3.75rem] sm:mx-[10%]">
                 <div className="flex flex-col justify-center text-center items-center">
                     <h1 className="font-ovo text-[clamp(36px,_3.9vw,_76px)] font-regular">Danos tu opinión</h1>
                     <h2 className="font-ovo text-[clamp(26px,_2.8vw,_55px)] font-medium">¡Conocer tu opinión es de suma importancia para nosotros!</h2>
@@ -111,7 +111,7 @@ export function Contacto() {
                                     <input className="w-full pl-4 py-4 sm:py-8 border-2 border-blue-1  rounded-[10px] sm:rounded-[33px] focus:outline-none focus:shadow-outline font-outfit text-[clamp(16px,_1.7vw,_22.66px)] text-gray-1" id="correo" type="email" placeholder="Correo Electrónico" onChange={handleChange} />
                                 </div>
                             </div>
-                            <div className="grid items-center sm:order-2 order-1 mb-6 sm:mb-0 sm:col-start-4 ml-6">
+                            <div className="grid items-center sm:order-2 order-1 mb-6 sm:mb-0 sm:col-start-4 ml-6 justify-center">
                                 <img className='size-64 sm:size-[26.8rem]' src={tortuga} alt="Tortuga_svg" />
                             </div>
                         </div>
