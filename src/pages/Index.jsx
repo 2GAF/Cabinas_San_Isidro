@@ -1,8 +1,6 @@
 import { Header } from "../common/Header.jsx";
 import { Footer } from "../common/Footer.jsx";
 import hero_img from "../assets/hero-img.jpg"
-import habitaciones from "../assets/habitaciones.jpg"
-import { Link } from 'react-router-dom';
 import { Opcion } from "../buttons/Opcion.jsx";
 import { useState } from "react";
 import { Carrusel } from "../components/Carrusel.jsx";
@@ -11,7 +9,7 @@ import icon_zonas from "../assets/icon-zonas.png"
 import icon_mar from "../assets/icon-mar.png"
 import icon_piscina from "../assets/icon-piscina.png"
 import { Caracteristica } from "../components/Caracteristica.jsx";
-import img11 from '../assets/imgs/Inst28.jpg'
+import habitaciones from '../assets/imgs/H5.jpg'
 import cabinas from '../assets/imgs/Inst20.jpg'
 import { VerMas } from "../buttons/VerMas.jsx";
 
@@ -54,7 +52,7 @@ export function Index() {
           {activeTab == 'Habitaciones' && (
             <div className="fade-in grid lg:grid-cols-3 sm:gap-8 gap-4 sm:mx-0 mx-6">
               <div className="col-start-1 col-end-3">
-                <img className="w-[133rem] object-cover rounded-xl h-full" src={habitaciones} alt="Imagen habitaciones" />
+                <img className="w-[133rem] object-cover rounded-xl h-full max-h-[40rem] object-bottom" src={habitaciones} alt="Imagen habitaciones" />
               </div>
               <div className="flex flex-col justify-center col-start-1 col-end-3 lg:col-start-3 lg:col-end-4">
                 <h3 className="text-[clamp(26px,_2.8vw,_3.438rem)] text-blue-1">Habitaciones</h3>

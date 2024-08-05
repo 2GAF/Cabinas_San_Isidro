@@ -32,6 +32,10 @@ export function Hospedaje() {
         }
     }, [imagenes.length]);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     // Cambia la tarjeta de la cabina al hacer click
     const manejarClick = () => {
         setTarjetaAlFrente(!tarjetaAlFrente);
