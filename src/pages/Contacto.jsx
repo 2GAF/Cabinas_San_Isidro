@@ -61,7 +61,7 @@ export function Contacto() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const multipleRecipients = 'gustavo.acosta1703@gmail.com, csisidro@gmail.com';
+        const multipleRecipients = 'csisidro@gmail.com, mariechengg@gmail.com';
 
         const templateParams = {
             ...formData,
