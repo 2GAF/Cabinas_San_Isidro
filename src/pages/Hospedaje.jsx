@@ -54,7 +54,7 @@ export function Hospedaje() {
             {/* Sección para las cabinas */}
             {activeTab === 'Cabinas' && (
                 <div className="md:px-[3.125rem] px-[1rem]">
-                    <div className="flex justify-center mt-4 sm:mt-8 py-[0.813rem]">
+                    <div className="flex justify-center font-ovo mt-4 sm:mt-8 py-[0.813rem]">
                         <Opcion setter={setActiveTab} text='Habitaciones' isActive={activeTab} />
                         <hr className="border-2 border-blue-1 h-auto rounded-3xl sm:mx-7 mx-5" />
                         <Opcion setter={setActiveTab} text='Cabinas' isActive={activeTab} />
