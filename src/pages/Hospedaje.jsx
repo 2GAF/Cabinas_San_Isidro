@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Cantidad } from "../buttons/Cantidad.jsx";
 import fanBlue from "../assets/fanBlack.svg";
 import tvBlue from "../assets/tvBlack.svg";
+import acBlue from "../assets/acBlack.svg";
 import { useCabInfo } from "../hooks/useCabInfo.js";
 import { CabinaCard } from "../buttons/CabinaCard.jsx";
 
@@ -62,7 +63,7 @@ export function Hospedaje() {
                         <div className="w-custom-img relative py-3w" onClick={manejarClick} role="button">
                             <img className={`transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
                             <div
-                                className={`absolute top-5 lg:top-16 right-[-2rem] md:right-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[22.375rem] md:h-[20.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 transform translate-x-0 ' : 'z-[-10] transform -translate-x-10'}`}
+                                className={`absolute top-1 lg:top-16 right-[-2rem] md:right-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[22.375rem] md:h-[20.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 transform translate-x-0 ' : 'z-[-10] transform -translate-x-10'}`}
                             >
                                 <div className="px-[0.626rem] flex flex-col gap-y-[0.625rem]">
                                     <h1 className="text-3xl font-medium hidden md:block">{cabinaEscogida?.titulo}</h1>
@@ -100,7 +101,7 @@ export function Hospedaje() {
 
                         <div className="flex gap-x-[0.938rem] py-[0.813rem]">
                             <h1 className="font-outfit text-links font-medium">Servicios:</h1>
-                            <img src={fanBlue} alt="" />
+                            <img src={cabinaEscogida.servicio==='Abanico'?fanBlue:acBlue} alt="" />
                             <img src={tvBlue} alt="" />
                         </div>
                     </section>
@@ -108,7 +109,7 @@ export function Hospedaje() {
                     <div className="bg-blue-1 rounded-xl py-[0.626rem] flex justify-center mb-[1.625rem] lg:hidden">
                         <a className="text-white text-ovo text-base" href="https://wa.me/message/ZGYH7OW6HZAEN1">Reservar</a>
                     </div>
-                    <p className="font-texto text-gray-1 font-outfit text-center pb-14">Lorem ipsum dolor sit amet. Ex voluptatem autem ut suscipitLorem ipsum dolor sit amet. Ex voluptatem autem ut suscipitLorem ipsum dolor sit amet. Ex voluptatem autem ut suscipit</p>
+                    <p className="font-links text-gray-1 font-outfit text-center pb-14">Ser permite máximo una persona adicional en cada cabina (esto por motivos de seguridad), la cual debe cancelar un monto de ₡5.000 cada noche y debe traer su propio colchón.</p>
                 </div>
             )}
             {/* Sección para las habitaciones */}
@@ -123,7 +124,7 @@ export function Hospedaje() {
                         <div className="w-custom-img relative py-3w" onClick={manejarClick} role="button">
                             <img className={`transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
                             <div
-                                className={`absolute top-5 lg:top-16 left-[-2rem] md:left-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[22.375rem] md:h-[20.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 -transform translate-x-0 ' : 'z-[-10] transform translate-x-10'}`}
+                                className={`absolute top-1 lg:top-16 left-[-2rem] md:left-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[22.375rem] md:h-[20.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 -transform translate-x-0 ' : 'z-[-10] transform translate-x-10'}`}
                             >
                                 <div className="px-[0.626rem] flex flex-col gap-y-[0.625rem]">
                                     <h1 className="text-3xl font-medium hidden md:block">{cabinaEscogida?.titulo}</h1>
@@ -161,7 +162,7 @@ export function Hospedaje() {
 
                         <div className="flex gap-x-[0.938rem] py-[0.813rem]">
                             <h1 className="font-outfit text-links font-medium">Servicios:</h1>
-                            <img src={fanBlue} alt="" />
+                            <img src={acBlue} alt="" />
                             <img src={tvBlue} alt="" />
                         </div>
                     </section>
@@ -169,7 +170,7 @@ export function Hospedaje() {
                     <div className="bg-blue-1 rounded-xl py-[0.626rem] flex justify-center mb-[1.625rem] lg:hidden">
                         <a className="text-white text-ovo text-base" href="https://wa.me/message/ZGYH7OW6HZAEN1">Reservar</a>
                     </div>
-                    <p className="font-texto text-gray-1 font-outfit text-center pb-14">Lorem ipsum dolor sit amet. Ex voluptatem autem ut suscipitLorem ipsum dolor sit amet. Ex voluptatem autem ut suscipitLorem ipsum dolor sit amet. Ex voluptatem autem ut suscipit</p>
+                    <p className="font-links text-gray-1 font-outfit text-center pb-14">Es prohibido cocinar dentro de la habitación, ya que el espacio no es apto para realizar esta actividad.</p>
                 </div>
             )}
 

@@ -14,15 +14,15 @@ export function Nosotros() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
-      
+    }, []);
+
     return (
         <div>
             <div className="font-ovo mb-3vh ">
                 <div className=" mx-4 my-[2.875rem] sm:mx-[3.75rem]">
                     <Header />
                 </div>
-                <div className="mx-4 sm:mx-[3.75rem]">
+                <div className="mx-4 sm:mx-[10rem]">
                     <div className="flex flex-col lg:grid lg:grid-cols-2 lg:items-start gap-[25px]">
                         <div className="flex sm:order-1 order-2 justify-center items-center w-full my-auto">
                             <div className="p-0">
@@ -33,10 +33,11 @@ export function Nosotros() {
                                     Sobre nosotros
                                 </h2>
                                 <h3 className="lg:flex font-regular text-[2vh]  lg:text-[1.5vw] leading-tight">
-                                    Lorem ipsum dolor sit amet. Ex voluptatem autem ut suscipit
-                                    voluptas in omnis reprehenderit et quia aliquam. Quo dolores
-                                    consectetur vel aspernatur temporibus ut obcaecati deserunt
-                                    nam adipisci sunt. Hic reprehenderit eligendi
+                                    Hoy y siempre, HOTEL & CABINAS SAN ISIDRO ha sido uno de los más prestigiosos complejos de cabinas en el turismo nacional, 
+                                    gracias al arduo trabajo, la constante superación, la honestidad, la rica tradición y el deseo de ofrecer lo mejor a nuestros 
+                                    huéspedes, valores inculcados por la familia Guevara-Guth. Ubicado en la hermosa Puntarenas, Costa Rica, nuestro 
+                                    establecimiento combina la calidez de un servicio familiar con la profesionalidad de un equipo dedicado a la excelencia, ofreciendo una 
+                                    amplia variedad de cabinas y habitaciones con todas las comodidades necesarias para parejas, trabajadores y familias grandes.
                                 </h3>
                             </div>
                         </div>
@@ -62,21 +63,21 @@ export function Nosotros() {
                                 imageSrc={Mision}
                                 imageAlt="Misión"
                                 title="Misión"
-                                description="Lorem ipsum dolor sit amet. Ex voluptatem autem ut suscipit voluptas in omnis reprehender.Lorem ipsum dolor sit amet."
+                                description="Proporcionar un servicio de hospedaje de alta calidad con atención personalizada y hospitalidad, asegurando la satisfacción de nuestros huéspedes. Buscamos crear un ambiente acogedor y confortable, haciendo de cada estancia una experiencia memorable y única en Puntarenas, Costa Rica."
                                 hasBorder={true}
                             />
                             <UsComponent
                                 imageSrc={Vision}
                                 imageAlt="Visión"
                                 title="Visión"
-                                description="Lorem ipsum dolor sit amet. Ex voluptatem autem ut suscipit voluptas in omnis reprehender.Lorem ipsum dolor sit amet."
+                                description="Ser el complejo de cabinas más reconocido en Puntarenas y Costa Rica, destacándonos por la excelencia en el servicio al cliente y nuestras instalaciones de calidad. Aspiramos a ser líderes en sostenibilidad y mejora continua en la industria turística."
                                 hasBorder={true}
                             />
                             <UsComponent
                                 imageSrc={Valores}
                                 imageAlt="Valores"
                                 title="Valores"
-                                description="Lorem ipsum dolor sit amet. Ex voluptatem autem ut suscipit voluptas in omnis reprehender.Lorem ipsum dolor sit amet."
+                                description="Valoramos la hospitalidad, ofreciendo un trato amable y personalizado. Nos comprometemos a mantener altos estándares de calidad y actuar con honestidad y transparencia. Valoramos la tradición local, nos dedicamos a la superación constante y estamos comprometidos con la sostenibilidad y la satisfacción de nuestros clientes."
                             />
                         </div>
                     </div>
