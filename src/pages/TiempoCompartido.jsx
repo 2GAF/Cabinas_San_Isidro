@@ -4,6 +4,7 @@ import { Footer } from "../common/Footer";
 import instalaciones from "../assets/instalaciones.svg";
 import tortuga from "../assets/tortuga-santa.svg";
 import semana from "../assets/semana.svg";
+import balija from "../assets/balija.svg";
 import descuento from "../assets/descuento.svg";
 import Tortuga from "../assets/tortuga-compartido.png";
 import fondo from "../assets/fondo-carta-2.svg"
@@ -33,9 +34,9 @@ export function TiempoCompartido() {
     const tarjetas = {
         '1': [
             {
-                precio: '₡183 mil',
-                temporada: 'Temporada B',
-                texto: 'Para los socios tipo B, el uso de semana del año en curso abarca todo el año (excepto Semana Santa, Vacaciones de 15 días, ni Semana 52) y debe hacerse con al menos un mes de anticipación.',
+                precio: '₡200 mil',
+                temporada: 'Temporada A',
+                texto: 'Para los socios tipo A, el uso de semana del año en curso abarca Semana Santa, Vacaciones de 15 días, ni Semana 52 (específicamente para la temporada según su contrato) y debe hacerse con al menos un mes de anticipación.',
                 imagen: tortuga,
                 fondo: fondo2,
                 hover: fondo,
@@ -43,9 +44,9 @@ export function TiempoCompartido() {
         ],
         '2': [
             {
-                precio: '₡200 mil',
-                temporada: 'Temporada A',
-                texto: 'Para los socios tipo A, el uso de semana del año en curso abarca Semana Santa, Vacaciones de 15 días, ni Semana 52 (específicamente para la temporada según su contrato) y debe hacerse con al menos un mes de anticipación.',
+                precio: '₡183 mil',
+                temporada: 'Temporada B',
+                texto: 'Para los socios tipo B, el uso de semana del año en curso abarca todo el año (excepto Semana Santa, Vacaciones de 15 días, ni Semana 52) y debe hacerse con al menos un mes de anticipación.',
                 imagen: tortuga,
                 fondo: fondo2,
                 hover: fondo,
@@ -67,19 +68,19 @@ export function TiempoCompartido() {
         {
             titulo: 'Uso de semana',
             descripcion: 'Disfrute de una semana al año de lunes a lunes acorde a la capacidad de la accion adquirida.',
-            imagen: semana,
+            imagen: balija,
 
         },
         {
             titulo: 'Descuentos',
             descripcion: 'Descuento del 50% sobre la tarifa rack en todas las cabinas equipadas. Descuento del 20% en alimentos y bebidas en el Resturante Cocos.',
-            imagen: semana,
+            imagen: descuento,
 
         },
         {
             titulo: 'Uso de instalaciones',
             descripcion: 'Disfrute gratuito de las piscinas, zonas verdes, duchas, vestidores y acceso al mar, en cualquier época del año en horario de 8:00am a 5:00pm.',
-            imagen: semana,
+            imagen: instalaciones,
 
         },
     ];
@@ -188,14 +189,14 @@ export function TiempoCompartido() {
                             )}
                         </div>
                         <section className="flex justify-center items-center gap-x-[0.938rem] py-[1.625rem] lg:hidden ">
-                            <h1 className="font-outfit text-links font-medium">Personas:</h1>
+                            <h1 className="font-outfit text-links font-medium">Acción:</h1>
                             <Cantidad setter={setCantidadSeleccionada} text="1" isActive={cantidadSeleccionada} />
                             <Cantidad setter={setCantidadSeleccionada} text="2" isActive={cantidadSeleccionada} />
                             <Cantidad setter={setCantidadSeleccionada} text="3" isActive={cantidadSeleccionada} />
                         </section>
                     </div>
 
-                    <h1 className=" font-semibold text-[#2C5CA3] my-[6vh] md:my-[3vw] text-center text-[clamp(26px,_2.8vw,_3.438rem)] leading-none">Descuentos para socios</h1>
+                    <h1 className=" font-semibold text-[#2C5CA3] my-[6vh] md:my-[3vw] text-center text-[clamp(26px,_2.8vw,_3.438rem)] leading-none">Descuentos en hospedaje para socios</h1>
 
                     {activeTab === 'Cabinas' && (
                         <div className="">
