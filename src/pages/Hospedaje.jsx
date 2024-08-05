@@ -54,14 +54,14 @@ export function Hospedaje() {
             {/* Sección para las cabinas */}
             {activeTab === 'Cabinas' && (
                 <div className="md:px-[3.125rem] px-[1rem]">
-                    <div className="flex justify-center mt-4 sm:mt-8 py-[0.813rem]">
+                    <div className="flex justify-center font-ovo mt-4 sm:mt-8 py-[0.813rem]">
                         <Opcion setter={setActiveTab} text='Habitaciones' isActive={activeTab} />
                         <hr className="border-2 border-blue-1 h-auto rounded-3xl sm:mx-7 mx-5" />
                         <Opcion setter={setActiveTab} text='Cabinas' isActive={activeTab} />
                     </div>
                     <div className="flex justify-center">
                         <div className="w-custom-img relative py-3w" onClick={manejarClick} role="button">
-                            <img className={`transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
+                            <img className={`rounded-xl transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
                             <div
                                 className={`absolute top-1 lg:top-16 right-[-2rem] md:right-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[22.375rem] md:h-[20.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 transform translate-x-0 ' : 'z-[-10] transform -translate-x-10'}`}
                             >
