@@ -33,11 +33,11 @@ export function Carrusel() {
 
   return (
 
-    <Carousel showThumbs={false} showArrows={true} autoPlay={true} interval={2000} infiniteLoop={true} stopOnHover={false}>
+    <Carousel showThumbs={false} showArrows={true}  interval={2000} infiniteLoop={true} stopOnHover={false}>
       {imgs.map(element => 
         (
-          <div key={element.id} className='xl:h-[55rem] md:h-[30rem] sm:[20rem]'>
-            <img className='xl:h-[55rem] md:h-[40rem] sm:[40rem] object-cover object-center' src={element.img} alt="Legend 1" />
+          <div key={element.id} className='xl:h-[55rem] md:h-[30rem] sm:[20rem] h-full'>
+            <img className='xl:h-[55rem] md:h-[40rem] sm:[40rem] object-cover object-center h-full' src={element.img} alt="Legend 1" />
           </div>
         )
       )}
