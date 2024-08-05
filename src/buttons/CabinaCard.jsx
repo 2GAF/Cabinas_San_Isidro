@@ -4,6 +4,7 @@ import fanWhite from "../assets/fanWhite.svg";
 import tvWhite from "../assets/tvWhite.svg";
 import acWhite from "../assets/acWhite.svg";
 import acBlue from "../assets/acBlack.svg";
+//import PropTypes from 'prop-types';
 
 export function CabinaCard({ setter, text, isActive, servicio }) {
     const isActiveCard = isActive === text;
@@ -28,4 +29,12 @@ export function CabinaCard({ setter, text, isActive, servicio }) {
         </div>
     );
 }
+
+// Definir PropTypes
+//CabinaCard.propTypes = {
+  //  setter: PropTypes.func.isRequired, // Ajusta el tipo según corresponda
+    //text: PropTypes.string.isRequired, // Ajusta el tipo según corresponda
+    //isActive: PropTypes.bool.isRequired, // Ajusta el tipo según corresponda
+    //servicio: PropTypes.object.isRequired // Ajusta el tipo según corresponda
+  //};
 
