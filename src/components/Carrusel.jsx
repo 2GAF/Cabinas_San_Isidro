@@ -2,12 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import img1 from '../assets/1.jpg'
-import img2 from '../assets/2.jpg'
-import img3 from '../assets/3.jpg'
-import img4 from '../assets/4.jpg'
-import img5 from '../assets/5.jpg'
-import img6 from '../assets/6.jpg'
+import img1 from '../assets/imgs/Inst1.jpg'
+import img2 from '../assets/imgs/Inst4.jpg'
+import img3 from '../assets/imgs/Inst5.jpg'
+import img4 from '../assets/imgs/Inst6.jpg'
+import img5 from '../assets/imgs/Inst7.jpg'
+import img6 from '../assets/imgs/Inst9.jpg'
+import img7 from '../assets/imgs/Inst11.jpg'
+import img8 from '../assets/imgs/Inst13.jpg'
+import img9 from '../assets/imgs/Inst16.jpg'
+import img10 from '../assets/imgs/Inst24.jpg'
+import img11 from '../assets/imgs/Inst28.jpg'
 
 
 export function Carrusel() {
@@ -19,6 +24,11 @@ export function Carrusel() {
     { id: 4, img: img4 },
     { id: 5, img: img5 },
     { id: 6, img: img6 },
+    { id: 7, img: img7 },
+    { id: 8, img: img8 },
+    { id: 9, img: img9 },
+    { id: 10, img: img10 },
+    { id: 11, img: img11 },
   ]
 
   return (

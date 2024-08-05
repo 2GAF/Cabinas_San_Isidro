@@ -11,6 +11,10 @@ import icon_zonas from "../assets/icon-zonas.png"
 import icon_mar from "../assets/icon-mar.png"
 import icon_piscina from "../assets/icon-piscina.png"
 import { Caracteristica } from "../components/Caracteristica.jsx";
+import img11 from '../assets/imgs/Inst28.jpg'
+import cabinas from '../assets/imgs/Inst20.jpg'
+import { VerMas } from "../buttons/VerMas.jsx";
+
 
 export function Index() {
 
@@ -36,8 +40,9 @@ export function Index() {
       </div>
       {/* Hero */}
 
-      {/* Opciones */}
-      <section className="mt-6 sm:mt-10 sm:mx-14 lg:mx-32">
+      <div className="mx-6 sm:mx-14 md:mx-[10%] 2xl:mx-[15%] mb-5">
+        {/* Opciones */}
+      <section className="mt-6 sm:mt-10">
         <h1 className="text-center text-[clamp(26px,_2.8vw,_3.438rem)]">Contamos con 2 opciones de reservación: </h1>
         <div className="flex justify-center mt-4 sm:mt-8">
           <Opcion setter={setActiveTab} text='Habitaciones' isActive={activeTab} />
@@ -47,33 +52,33 @@ export function Index() {
         </div>
         <div className="flex h-auto mt-12">
           {activeTab == 'Habitaciones' && (
-            <div className="fade-in grid md:grid-cols-3 sm:gap-8 gap-4 sm:mx-0 mx-6">
+            <div className="fade-in grid lg:grid-cols-3 sm:gap-8 gap-4 sm:mx-0 mx-6">
               <div className="col-start-1 col-end-3">
                 <img className="w-[133rem] object-cover rounded-xl h-full" src={habitaciones} alt="Imagen habitaciones" />
               </div>
-              <div className="flex flex-col justify-center col-start-1 col-end-3 md:col-start-3 md:col-end-4">
+              <div className="flex flex-col justify-center col-start-1 col-end-3 lg:col-start-3 lg:col-end-4">
                 <h3 className="text-[clamp(26px,_2.8vw,_3.438rem)] text-blue-1">Habitaciones</h3>
                 <p className="font-outfit text-[clamp(16px,_1.7vw,_22.66px)]">¡Bienvenidos a nuestras acogedoras habitaciones con aire acondicionado, perfectas para parejas o trabajadores que buscan comodidad y conveniencia en Puntarenas! Ideal para descansar después de un día de actividades. Disfrute de dormitorios espaciosos y confortables, aire acondicionado para mantener una temperatura agradable, acceso a 5 piscinas, zonas verdes y al mar, proporcionando todo lo necesario para una estancia placentera y productiva.</p>
                 <div>
-                  <Link to="/Hospedaje" className="block text-center text-[clamp(16px,_1.7vw,_34px)] bg-blue-1 py-4 font-outfit text-white w-full rounded-2xl mt-4">Ver más</Link>
+                  <VerMas enlace={'/Hospedaje'} text={'Ver más'}/>
                 </div>
               </div>
             </div>
           )}
           {activeTab == 'Cabinas' && (
-            <div className="fade-out grid md:grid-cols-3 sm:gap-8 gap-4 sm:mx-0 mx-6">
-              <div className="col-start-1 col-end-3 block md:hidden">
-                <img className="w-[133rem] object-cover rounded-xl h-full" src={habitaciones} alt="Imagen habitaciones" />
+            <div className="fade-out grid lg:grid-cols-3 sm:gap-8 gap-4 sm:mx-0 mx-6">
+              <div className="col-start-1 col-end-3 block lg:hidden">
+                <img className="w-[133rem] object-cover rounded-xl h-full" src={cabinas} alt="Imagen habitaciones" />
               </div>
-              <div className="flex flex-col justify-center col-start-1 col-end-3 md:col-start-1 md:col-end-2">
+              <div className="flex flex-col justify-center col-start-1 col-end-3 lg:col-start-1 lg:col-end-2">
                 <h3 className="text-[clamp(26px,_2.8vw,_3.438rem)] text-blue-1">Cabinas</h3>
                 <p className="font-outfit text-[clamp(16px,_1.7vw,_22.66px)]">¡Bienvenidos a nuestras encantadoras cabinas, perfectas para unas vacaciones inolvidables. Estas cuentan con utensilios básicos de cocina y refrigeradora, ideal para preparar comidas sencillas durante su estancia. Disfrute de amplias áreas comunes donde la familia puede reunirse, acceso a 5 piscinas, zonas verdes y al mar, ofreciendo todo lo necesario para una experiencia vacacional memorable.</p>
                 <div>
-                  <Link to="/Cabinas" className="block text-center text-[clamp(16px,_1.7vw,_34px)] bg-blue-1 py-4 text-white w-full rounded-2xl mt-4">Ver más</Link>
+                  <VerMas enlace={'/Hospedaje'} text={'Ver más'}/>
                 </div>
               </div>
               <div className="col-start-2 md:col-end-4">
-                <img className="w-[133rem] object-cover rounded-xl h-full hidden md:block" src={habitaciones} alt="Imagen habitaciones" />
+                <img className="w-[133rem] object-cover rounded-xl h-full hidden lg:block max-h-[40rem]" src={cabinas} alt="Imagen habitaciones" />
               </div>
             </div>
 
@@ -83,7 +88,7 @@ export function Index() {
       {/* Opciones */}
 
       {/* Servicios ofrecidos */}
-      <section className="mt-6 sm:mt-10 mx-6 sm:mx-14 lg:mx-32 mb-8">
+      <section className="mt-6 sm:mt-10">
         <h2 className="text-center text-[clamp(26px,_2.8vw,_3.438rem)]">Servicios Ofrecidos:</h2>
           <Carrusel />
         <div className="flex justify-around mt-4">
@@ -94,6 +99,7 @@ export function Index() {
         </div>
       </section>
       {/* Servicios ofrecidos */}
+      </div>
       <Footer />
     </div>
   )
