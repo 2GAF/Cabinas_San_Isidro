@@ -92,7 +92,7 @@ const cabinasInfo = {
 
 // Custom hook para manejar la información de las cabinas
 export const useCabInfo = (activeCap) => {
-  const [cabinaEscogida, setCabina] = useState({});
+  const [cabinaEscogida, setCabinaEscogida] = useState({});
 
   useEffect(() => {
     seleccion(activeCap);
@@ -101,7 +101,7 @@ export const useCabInfo = (activeCap) => {
   // Función para seleccionar la cabina según la cantidad de personas
   const seleccion = (activeCap) => {
     const cabinaKey = Object.keys(cabinasInfo).find(key => key === activeCap || key + ' Personas' === activeCap) || 'default';
-    setCabina(cabinasInfo[cabinaKey]);
+    setCabinaEscogida(cabinasInfo[cabinaKey]);
   };
 
   return { cabinaEscogida };

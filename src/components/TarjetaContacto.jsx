@@ -1,5 +1,6 @@
 import React from 'react';
 import whatsapp from "../assets/whatsapp_icono.svg";
+import PropTypes from 'prop-types';
 
 const TarjetaContacto = ({ image, icon, title, email, phone, link }) => {
     return (
@@ -23,6 +24,15 @@ const TarjetaContacto = ({ image, icon, title, email, phone, link }) => {
             </div>
         </div>
     );
+};
+
+TarjetaContacto.propTypes = {
+    image: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired
 };
 
 export default TarjetaContacto;

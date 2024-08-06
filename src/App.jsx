@@ -6,6 +6,8 @@ import { Nosotros } from './pages/Nosotros';
 import { TiempoCompartido } from './pages/TiempoCompartido';
 import { Contacto } from './pages/Contacto';
 
+//requiere npm install prop-types
+
 
 function App() {
 

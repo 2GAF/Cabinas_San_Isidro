@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 export function UsComponent({ imageSrc, imageAlt, title, description, hasBorder }) {
   return (
@@ -19,3 +19,11 @@ export function UsComponent({ imageSrc, imageAlt, title, description, hasBorder 
     </div>
   );
 }
+
+UsComponent.propTypes = {
+  imageSrc: PropTypes.string.isRequired,
+  imageAlt: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  hasBorder: PropTypes.bool.isRequired
+};

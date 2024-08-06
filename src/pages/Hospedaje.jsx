@@ -11,7 +11,7 @@ import { CabinaCard } from "../buttons/CabinaCard.jsx";
 
 export function Hospedaje() {
     const [activeTab, setActiveTab] = useState('Cabinas');
-    const [activeCap, setCapacidad] = useState('3-4');
+    const [activeCap, setActiveCap] = useState('3-4');
     const { cabinaEscogida } = useCabInfo(activeCap);
 
     // Indica cuando la tarjeta está al frente
@@ -43,9 +43,9 @@ export function Hospedaje() {
 
     useEffect(() => {
         if (activeTab === 'Cabinas') {
-            setCapacidad('3-4');
+            setActiveCap('3-4');
         } else {
-            setCapacidad('1');
+            setActiveCap('1');
         }
     }, [activeTab]);
 
@@ -64,11 +64,9 @@ export function Hospedaje() {
                         <Opcion setter={setActiveTab} text='Cabinas' isActive={activeTab} />
                     </div>
                     <div className="flex justify-center">
-                        <div className="w-custom-img relative py-3w" onClick={manejarClick} role="button" tabIndex="0">
+                        <button className="w-custom-img relative py-3w" onClick={manejarClick}>
                             <img className={`transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
-                            <div
-                                className={`absolute top-1 lg:top-16 right-[-2rem] md:right-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[22.375rem] md:h-[20.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 transform translate-x-0 ' : 'z-[-10] transform -translate-x-10'}`}
-                            >
+                            <div className={`absolute top-1 lg:top-16 right-[-2rem] md:right-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[22.375rem] md:h-[20.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 transform translate-x-0 ' : 'z-[-10] transform -translate-x-10'}`}>
                                 <div className="px-[0.626rem] flex flex-col gap-y-[0.625rem]">
                                     <h1 className="text-3xl font-medium hidden md:block">{cabinaEscogida?.titulo}</h1>
                                     <h1 className="text-xl font-bold md:font-light">{cabinaEscogida?.precio}</h1>
@@ -79,24 +77,24 @@ export function Hospedaje() {
                                     <a href="https://wa.me/message/ZGYH7OW6HZAEN1"><div className="bg-white rounded-xl py-[0.313rem] flex justify-center text-blue-1 text-ovo text-base">Reservar</div></a>
                                 </div>
                             </div>
-                        </div>
+                        </button>
                     </div>
 
                     {/* Selector de la capacidad de la cabina móvil */}
                     <section className="flex justify-center items-center gap-x-[0.938rem] py-[1.625rem] lg:hidden">
                         <h1 className="font-outfit text-links font-medium">Personas:</h1>
-                        <Cantidad setter={setCapacidad} text='3-4' isActive={activeCap} />
-                        <Cantidad setter={setCapacidad} text='5-6' isActive={activeCap} />
-                        <Cantidad setter={setCapacidad} text='5-6*' isActive={activeCap} />
-                        <Cantidad setter={setCapacidad} text='8-9' isActive={activeCap} />
+                        <Cantidad setter={setActiveCap} text='3-4' isActive={activeCap} />
+                        <Cantidad setter={setActiveCap} text='5-6' isActive={activeCap} />
+                        <Cantidad setter={setActiveCap} text='5-6*' isActive={activeCap} />
+                        <Cantidad setter={setActiveCap} text='8-9' isActive={activeCap} />
                     </section>
 
                     {/* Selector de la capacidad de la cabina desktop */}
                     <section className="justify-center items-center gap-x-[0.938rem] py-[1.625rem] hidden lg:flex">
-                        <CabinaCard setter={setCapacidad} text='3-4 Personas' isActive={activeCap} servicio={'Abanico'} />
-                        <CabinaCard setter={setCapacidad} text='5-6 Personas' isActive={activeCap} servicio={'Abanico'} />
-                        <CabinaCard setter={setCapacidad} text='5-6* Personas' isActive={activeCap} servicio={'A/C'} />
-                        <CabinaCard setter={setCapacidad} text='8-9 Personas' isActive={activeCap} servicio={'Abanico'} />
+                        <CabinaCard setter={setActiveCap} text='3-4 Personas' isActive={activeCap} servicio={'Abanico'} />
+                        <CabinaCard setter={setActiveCap} text='5-6 Personas' isActive={activeCap} servicio={'Abanico'} />
+                        <CabinaCard setter={setActiveCap} text='5-6* Personas' isActive={activeCap} servicio={'A/C'} />
+                        <CabinaCard setter={setActiveCap} text='8-9 Personas' isActive={activeCap} servicio={'Abanico'} />
                     </section>
 
                     <section className="md:hidden">
@@ -105,7 +103,7 @@ export function Hospedaje() {
 
                         <div className="flex gap-x-[0.938rem] py-[0.813rem]">
                             <h1 className="font-outfit text-links font-medium">Servicios:</h1>
-                            <img src={cabinaEscogida.servicio==='Abanico'?fanBlue:acBlue} alt="" />
+                            <img src={cabinaEscogida.servicio === 'Abanico' ? fanBlue : acBlue} alt="" />
                             <img src={tvBlue} alt="" />
                         </div>
                     </section>
@@ -127,9 +125,7 @@ export function Hospedaje() {
                     <div className="flex justify-center">
                         <div className="w-custom-img relative py-3w" onClick={manejarClick} role="button" tabIndex="0">
                             <img className={`transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
-                            <div
-                                className={`absolute top-1 lg:top-16 left-[-2rem] md:left-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[22.375rem] md:h-[20.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 -transform translate-x-0 ' : 'z-[-10] transform translate-x-10'}`}
-                            >
+                            <button className={`absolute top-1 lg:top-16 left-[-2rem] md:left-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[22.375rem] md:h-[20.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 -transform translate-x-0 ' : 'z-[-10] transform translate-x-10'}`}>
                                 <div className="px-[0.626rem] flex flex-col gap-y-[0.625rem]">
                                     <h1 className="text-3xl font-medium hidden md:block">{cabinaEscogida?.titulo}</h1>
                                     <h1 className="text-xl font-bold md:font-light">{cabinaEscogida?.precio}</h1>
@@ -139,25 +135,26 @@ export function Hospedaje() {
                                     <p className="text-center text-base font-light md:hidden">Ideal para parejas y trabajadores.</p>
                                     <a href="https://wa.me/message/ZGYH7OW6HZAEN1"><div className="bg-white rounded-xl py-[0.313rem] flex justify-center text-blue-1 text-ovo text-base">Reservar</div></a>
                                 </div>
-                            </div>
+                                </button>
+
                         </div>
                     </div>
 
                     {/* Selector de la capacidad de la cabina móvil */}
                     <section className="flex justify-center items-center gap-x-[0.938rem] py-[1.625rem] lg:hidden">
                         <h1 className="font-outfit text-links font-medium">Personas:</h1>
-                        <Cantidad setter={setCapacidad} text='1' isActive={activeCap} />
-                        <Cantidad setter={setCapacidad} text='2' isActive={activeCap} />
-                        <Cantidad setter={setCapacidad} text='3' isActive={activeCap} />
-                        <Cantidad setter={setCapacidad} text='4' isActive={activeCap} />
+                        <Cantidad setter={setActiveCap} text='1' isActive={activeCap} />
+                        <Cantidad setter={setActiveCap} text='2' isActive={activeCap} />
+                        <Cantidad setter={setActiveCap} text='3' isActive={activeCap} />
+                        <Cantidad setter={setActiveCap} text='4' isActive={activeCap} />
                     </section>
 
                     {/* Selector de la capacidad de la cabina desktop */}
                     <section className="justify-center items-center gap-x-[0.938rem] py-[1.625rem] hidden lg:flex">
-                        <CabinaCard setter={setCapacidad} text='1 Personas' isActive={activeCap} servicio={'A/C'} />
-                        <CabinaCard setter={setCapacidad} text='2 Personas' isActive={activeCap} servicio={'A/C'} />
-                        <CabinaCard setter={setCapacidad} text='3 Personas' isActive={activeCap} servicio={'A/C'} />
-                        <CabinaCard setter={setCapacidad} text='4 Personas' isActive={activeCap} servicio={'A/C'} />
+                        <CabinaCard setter={setActiveCap} text='1 Personas' isActive={activeCap} servicio={'A/C'} />
+                        <CabinaCard setter={setActiveCap} text='2 Personas' isActive={activeCap} servicio={'A/C'} />
+                        <CabinaCard setter={setActiveCap} text='3 Personas' isActive={activeCap} servicio={'A/C'} />
+                        <CabinaCard setter={setActiveCap} text='4 Personas' isActive={activeCap} servicio={'A/C'} />
                     </section>
 
                     <section className="md:hidden">

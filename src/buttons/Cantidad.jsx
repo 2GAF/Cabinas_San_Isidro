@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 
 export function Cantidad({setter, text, isActive}){
 
@@ -10,3 +12,9 @@ export function Cantidad({setter, text, isActive}){
         <button onClick={()=>setter(text)} className={btnClases}>{text}</button>
     )
 }
+
+Cantidad.propTypes = {
+    setter: PropTypes.func.isRequired,
+    text: PropTypes.string.isRequired,
+    isActive: PropTypes.bool.isRequired
+};

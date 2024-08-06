@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 export function CantidadCompartido({ setter, text, isActive }) {
     const clasesBase = "rounded-full bg-blue-1 size-14 w-full flex items-center justify-center text-gray-1 font-outfit text-links hover:bg-blue-1 hover:bg-blue-1 hover:text-white";
@@ -12,7 +13,13 @@ export function CantidadCompartido({ setter, text, isActive }) {
     return (
         <button onClick={() => setter(text)} className={btnClases}>
             {visibleText}
-            <span className="hidden sm:inline">{hiddenText}</span>
+            <span className="hidden sm:inline font-outfit">{hiddenText}</span>
         </button>
     );
 }
+
+CantidadCompartido.propTypes = {
+    setter: PropTypes.func.isRequired,
+    text: PropTypes.string.isRequired,
+    isActive: PropTypes.bool.isRequired
+};

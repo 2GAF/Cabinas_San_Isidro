@@ -5,7 +5,6 @@ import Valores from "../assets/Valores.svg";
 import { Header } from "../common/Header";
 import img from "../assets/2.jpg";
 import { UsComponent } from "../components/UsComponent";
-import Mapa from "../assets/Mapa.png";
 import Email from "../assets/Email.png";
 import Telefono from "../assets/Telefono.png";
 import { Footer } from "../common/Footer";

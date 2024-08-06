@@ -8,7 +8,6 @@ import eventos from "../assets/eventos_icono.svg";
 import reservacionimg from "../assets/imgs/reservacionesimg.png";
 import tiempo_compartidoimg from "../assets/imgs/tiempoimg.png";
 import eventosimg from "../assets/imgs/eventosimg.png";
-import whatsapp from "../assets/whatsapp_icono.svg";
 import tortuga from "../assets/tortuga_lentes.svg";
 import Tarjeta from '../components/TarjetaContacto';
 
@@ -17,6 +16,7 @@ export function Contacto() {
 
     const tarjetas = [
         {
+            id: 1,
             image: reservacionimg,
             icon: reservacion,
             title: 'Reservaciones',
@@ -26,6 +26,7 @@ export function Contacto() {
         },
 
         {
+            id: 2,
             image: tiempo_compartidoimg,
             icon: tiempo_compartido,
             title: 'Tiempo compartido',
@@ -34,6 +35,7 @@ export function Contacto() {
             link: 'https://wa.me/+50683904884/'
         },
         {
+            id: 3,
             image: eventosimg,
             icon: eventos,
             title: 'Eventos especiales',
@@ -71,10 +73,13 @@ export function Contacto() {
         emailjs.send('service_20ezo0y', 'template_5km2alr', templateParams, '299rHDs9I9PHYD-tx')
             .then((result) => {
                 alert('Mensaje enviado correctamente');
+                setFormData({ nombre: '', telefono: '', correo: '', mensaje: '' });
             }, (error) => {
                 alert('Error al enviar el mensaje');
                 console.error('Error:', error);
             });
+
+       
     };
 
     return (
@@ -87,8 +92,8 @@ export function Contacto() {
             </div>
             <section className="flex flex-col justify-center items-center gap-[1.3rem] sm:gap-[3.125rem]">
                 <div className="flex flex-wrap justify-center p-4 ">
-                    {tarjetas.map((tarjeta, index) => (
-                        <Tarjeta key={index} {...tarjeta} />
+                    {tarjetas.map((tarjeta) => (
+                        <Tarjeta key={tarjeta.id} {...tarjeta} />
                     ))}
                 </div>
             </section>

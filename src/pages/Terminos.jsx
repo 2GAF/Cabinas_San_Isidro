@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export function Terminos({ isOpen, onClose }) {
     if (!isOpen) return null;
@@ -60,3 +61,8 @@ export function Terminos({ isOpen, onClose }) {
         </div>
     );
 }
+
+Terminos.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    onClose: PropTypes.bool.isRequired,
+};
