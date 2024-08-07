@@ -23,7 +23,7 @@ export function Nosotros() {
                 </div>
                 <div className="mx-4 sm:mx-[10rem]">
                     <div className="flex flex-col lg:grid lg:grid-cols-2 lg:items-start gap-[25px]">
-                        <div className="flex sm:order-1 order-2 justify-center items-center w-full my-auto">
+                        <div className="flex sm:order-1 order-2 justify-center items-center w-full ">
                             <div className="p-0">
                                 <h1 className="hidden lg:flex text-[clamp(26px,_2.8vw,_3.438rem)] leading-none">
                                     Cabinas san Isidro
@@ -32,9 +32,7 @@ export function Nosotros() {
                                     Sobre nosotros
                                 </h2>
                                 <h3 className="lg:flex font-regular text-[2vh]  lg:text-[1.5vw] leading-tight">
-                                    Hoy y siempre, HOTEL & CABINAS SAN ISIDRO ha sido uno de los más prestigiosos complejos de cabinas en el turismo nacional, 
-                                    gracias al arduo trabajo, la constante superación, la honestidad, la rica tradición y el deseo de ofrecer lo mejor a nuestros 
-                                    huéspedes, valores inculcados por la familia Guevara-Guth. Ubicado en la hermosa Puntarenas, Costa Rica, nuestro 
+                                    Hoy y siempre, HOTEL & CABINAS SAN ISIDRO ha sido uno de los más prestigiosos complejos de cabinas en el turismo nacional. Ubicado en la hermosa Puntarenas, Costa Rica, nuestro 
                                     establecimiento combina la calidez de un servicio familiar con la profesionalidad de un equipo dedicado a la excelencia, ofreciendo una 
                                     amplia variedad de cabinas y habitaciones con todas las comodidades necesarias para parejas, trabajadores y familias grandes.
                                 </h3>
@@ -62,7 +60,7 @@ export function Nosotros() {
                                 imageSrc={Mision}
                                 imageAlt="Misión"
                                 title="Misión"
-                                description="Proporcionar un servicio de hospedaje de alta calidad con atención personalizada y hospitalidad, asegurando la satisfacción de nuestros huéspedes. Buscamos crear un ambiente acogedor y confortable, haciendo de cada estancia una experiencia memorable y única en Puntarenas, Costa Rica."
+                                description="Proporcionar un servicio de hospedaje de alta calidad con atención personalizada y hospitalidad, asegurando la satisfacción de nuestros huéspedes. Buscamos crear una experiencia memorable y única en Puntarenas, Costa Rica."
                                 hasBorder={true}
                             />
                             <UsComponent
@@ -76,7 +74,7 @@ export function Nosotros() {
                                 imageSrc={Valores}
                                 imageAlt="Valores"
                                 title="Valores"
-                                description="Valoramos la hospitalidad, ofreciendo un trato amable y personalizado. Nos comprometemos a mantener altos estándares de calidad y actuar con honestidad y transparencia. Valoramos la tradición local, nos dedicamos a la superación constante y estamos comprometidos con la sostenibilidad y la satisfacción de nuestros clientes."
+                                description="Valoramos la hospitalidad, ofreciendo un trato amable y personalizado. Nos comprometemos a mantener altos estándares de calidad y actuar con honestidad y transparencia."
                             />
                         </div>
                     </div>
@@ -90,7 +88,7 @@ export function Nosotros() {
                         <div className="w-full md:w-1/2 flex">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1964.7468813698372!2d-84.75954332166081!3d9.976009719614972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa031c10571ce39%3A0xb5e2acd58bbe21b2!2sCabinas%20San%20Isidro!5e0!3m2!1ses-419!2scr!4v1722641061111!5m2!1ses-419!2scr"
-                                className="rounded-[30px] w-full md:h-[500px]"
+                                className="rounded-[30px] w-full h-[300px] md:h-[500px]"
                                 allowfullscreen=""
                                 loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"

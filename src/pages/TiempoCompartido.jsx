@@ -292,7 +292,9 @@ export function TiempoCompartido() {
                         </div>
 
                     )}
-                    <div className="App">
+                    <h1 className=" font-semibold text-[#162E52] text-center font-outfit text-[clamp(26px,_2.8vw,_3.438rem)] leading-none">Instituciones afiliadas y convenios comerciales</h1>
+
+                    <div className="my-8">
                         <div
                             ref={carouselRef}
                             className="flex overflow-x-scroll whitespace-nowrap scrollbar-hide"
@@ -317,4 +319,8 @@ export function TiempoCompartido() {
             </div >
         </div >
     );
+
+
 }
+
+
