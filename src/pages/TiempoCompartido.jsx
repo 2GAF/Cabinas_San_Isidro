@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Header } from "../common/Header";
 import { Footer } from "../common/Footer";
 import instalaciones from "../assets/instalaciones.svg";
@@ -14,10 +14,31 @@ import fanBlue from "../assets/fanBlack.svg";
 import tvBlue from "../assets/tvBlack.svg";
 import acBlue from "../assets/acBlack.svg";
 import { CantidadCompartido } from '../buttons/CantidadCompartido.jsx';
+import '../App.css';
+import fanWhite from "../assets/fanWhite.svg";
+import tvWhite from "../assets/tvWhite.svg";
+import acWhite from "../assets/acWhite.svg";
+import ACOPRIBANACIO from "../assets/Patrocinio/ACOPRIBANACIO.svg";
+import ASEC from "../assets/Patrocinio/ASEC.svg";
+import ASECONSA from "../assets/Patrocinio/ASECONSA.svg";
+import ASEINDER from "../assets/Patrocinio/ASEINDER.svg";
+import ASEPBS from "../assets/Patrocinio/ASEPBS.svg";
+import ASEUNED from "../assets/Patrocinio/ASEUNED.svg";
+import COPESALUD from "../assets/Patrocinio/COPESALUD.svg";
+import SITET from "../assets/Patrocinio/SITET.svg";
+import UNDECA from "../assets/Patrocinio/UNDECA.svg";
 
-
-
-
+const images = [
+    { src: ACOPRIBANACIO, name: "ACOPRIBANACIO" },
+    { src: ASEC, name: "ASEC" },
+    { src: ASECONSA, name: "ASECONSA" },
+    { src: ASEINDER, name: "ASEINDER" },
+    { src: ASEPBS, name: "ASEPBS" },
+    { src: ASEUNED, name: "ASEUNED" },
+    { src: COPESALUD, name: "COPESALUD" },
+    { src: SITET, name: "SITET" },
+    { src: UNDECA, name: "UNDECA" },
+];
 
 
 export function TiempoCompartido() {
@@ -27,6 +48,29 @@ export function TiempoCompartido() {
     const [indiceActual, setIndiceActual] = useState(0);
     const [tarjetaAlFrente, setTarjetaAlFrente] = useState(true);
     const [cantidadSeleccionada, setCantidadSeleccionada] = useState('1');
+    const carouselRef = useRef(null);
+
+    useEffect(() => {
+        const carousel = carouselRef.current;
+        let scrollAmount = 0;
+        const scrollStep = 1;
+
+        const scroll = () => {
+            scrollAmount += scrollStep;
+            if (carousel.scrollWidth - scrollAmount <= carousel.clientWidth) {
+                scrollAmount = 0;
+            }
+            carousel.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth',
+            });
+        };
+
+        const intervalId = setInterval(scroll, 20);
+
+        return () => clearInterval(intervalId);
+    }, []);
+
     const tarjetas = {
         '1': [
             {
@@ -65,27 +109,30 @@ export function TiempoCompartido() {
 
     const beneficios = [
         {
-            id:1,
+            id: 1,
             titulo: 'Uso de semana',
             descripcion: 'Disfrute de una semana al año de lunes a lunes acorde a la capacidad de la accion adquirida.',
             imagen: balija,
 
         },
         {
-            id:2,
+            id: 2,
             titulo: 'Descuentos',
             descripcion: 'Descuento del 50% sobre la tarifa rack en todas las cabinas equipadas. Descuento del 20% en alimentos y bebidas en el Resturante Cocos.',
             imagen: descuento,
 
         },
         {
-            id:3,
+            id: 3,
             titulo: 'Uso de instalaciones',
             descripcion: 'Disfrute gratuito de las piscinas, zonas verdes, duchas, vestidores y acceso al mar, en cualquier época del año en horario de 8:00am a 5:00pm.',
             imagen: instalaciones,
 
         },
     ];
+
+
+
 
     const info = {};
 
@@ -149,7 +196,7 @@ export function TiempoCompartido() {
                                 </div>
                             </div>
                         </div>
-                        
+
 
                         <div className='flex flex-row gap-6'>
                             {Object.keys(tarjetas).map(key =>
@@ -211,7 +258,7 @@ export function TiempoCompartido() {
                             <div className="flex justify-center font-ovo mt-4 sm:mt-8 py-[0.813rem]">
                             </div>
                             <div className="flex justify-center">
-                                <div className="w-custom-img relative py-3w" onClick={manejarClick} role="button"  tabIndex="0">
+                                <div className="w-custom-img relative py-3w" onClick={manejarClick} role="button" tabIndex="0">
                                     <img className={`transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
                                     <button className={`absolute top-1 lg:top-16 right-[-2rem] md:right-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[22.375rem] md:h-[20.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 transform translate-x-0 ' : 'z-[-10] transform -translate-x-10'}`}>
                                         <div className="px-[0.626rem] flex flex-col gap-y-[0.625rem]">
@@ -223,7 +270,7 @@ export function TiempoCompartido() {
                                             <p className="text-center text-base font-light md:hidden">Ideal para las familias pequeñas y grandes.</p>
                                             <a href="https://wa.me/message/ZGYH7OW6HZAEN1"><div className="bg-white rounded-xl py-[0.313rem] flex justify-center text-blue-1 text-ovo text-base">Reservar</div></a>
                                         </div>
-                                        </button>
+                                    </button>
                                 </div>
                             </div>
 
@@ -243,10 +290,37 @@ export function TiempoCompartido() {
                             </div>
                             <p className="font-links text-gray-1 font-outfit text-center mt-[5vh] pb-14">Ser permite máximo una persona adicional en cada cabina (esto por motivos de seguridad), la cual debe cancelar un monto de ₡5.000 cada noche y debe traer su propio colchón.</p>
                         </div>
+
                     )}
+                    <h1 className=" font-semibold text-[#162E52] text-center font-outfit text-[clamp(26px,_2.8vw,_3.438rem)] leading-none">Instituciones afiliadas y convenios comerciales</h1>
+
+                    <div className="my-8">
+                        <div
+                            ref={carouselRef}
+                            className="flex overflow-x-scroll whitespace-nowrap scrollbar-hide"
+                        >
+                            {images.map((image, index) => (
+                                <div key={index} className="flex flex-col items-center m-2">
+                                    <div className='w-32 h-32 object-contain'>
+                                        <img
+                                            src={image.src}
+                                            alt={`carousel-${index}`}
+                                            className="w-full h-full"
+                                        />
+                                    </div>
+                                    <p className="text-center mt-2">{image.name}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                 </div>
                 <Footer />
             </div >
         </div >
     );
+
+
 }
+
+
