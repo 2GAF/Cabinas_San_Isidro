@@ -10,6 +10,7 @@ import fondo from "../assets/fondo-carta-2.svg"
 import fondo2 from "../assets/fondo-gris.svg"
 import { Cantidad } from '../buttons/Cantidad';
 import { useCabInfo } from "../hooks/useCabInfo.js";
+import {useAccionInfo} from "../hooks/useAccionInfo.js";
 import fanBlue from "../assets/fanBlack.svg";
 import tvBlue from "../assets/tvBlack.svg";
 import acBlue from "../assets/acBlack.svg";
