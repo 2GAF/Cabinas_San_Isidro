@@ -8,9 +8,12 @@ import tvBlue from "../assets/tvBlack.svg";
 import acBlue from "../assets/acBlack.svg";
 import { useCabInfo } from "../hooks/useCabInfo.js";
 import { CabinaCard } from "../buttons/CabinaCard.jsx";
+import { useLocation } from "react-router-dom";
+
 
 export function Hospedaje() {
-    const [activeTab, setActiveTab] = useState('Cabinas');
+    const location = useLocation();
+    const [activeTab, setActiveTab] = useState(location.state||'Cabinas');
     const [activeCap, setActiveCap] = useState('3-4');
     const { cabinaEscogida } = useCabInfo(activeCap);
 
