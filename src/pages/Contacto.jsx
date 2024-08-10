@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { Header } from "../common/Header.jsx";
 import { Footer } from "../common/Footer.jsx";
@@ -13,6 +13,10 @@ import Tarjeta from '../components/TarjetaContacto';
 
 
 export function Contacto() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const tarjetas = [
         {

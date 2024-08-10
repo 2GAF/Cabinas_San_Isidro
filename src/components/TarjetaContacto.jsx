@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const TarjetaContacto = ({ image, icon, title, email, phone, link }) => {
     return (
         <div className="relative bg-white rounded-[36px] shadow-lg overflow-hidden w-[320px] sm:w-[500px] m-4">
-            <img src={image} alt={title} className=" h-[195px] sm:h-[224px] w-[320px] sm:w-[500px] object-cover" />
+            <img src={image} alt={title} className=" h-[195px] sm:h-[224px] w-[320px] sm:w-[500px] object-cover object-bottom" />
             <div className="pt-[60px] ">
                     <div className="absolute right-[6.5rem] sm:right-[12.5rem] top-[8.5rem] sm:top-[10.5rem] bg-white shadow-lg p-5 rounded-full">
                         <img src={icon} alt="icon" className="size-[70px]"/>

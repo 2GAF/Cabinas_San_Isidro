@@ -24,7 +24,7 @@ export function Nosotros() {
                 <div className="mx-4 sm:mx-[10rem]">
                     <div className="flex flex-col lg:grid lg:grid-cols-2 lg:items-start gap-[25px]">
                         <div className="flex sm:order-1 order-2 justify-center items-center w-full ">
-                            <div className="p-0">
+                            <div className="p-0 items-">
                                 <h1 className="hidden lg:flex text-[clamp(26px,_2.8vw,_3.438rem)] leading-none">
                                     Cabinas san Isidro
                                 </h1>
@@ -67,7 +67,7 @@ export function Nosotros() {
                                 imageSrc={Vision}
                                 imageAlt="Visión"
                                 title="Visión"
-                                description="Ser el complejo de cabinas más reconocido en Puntarenas y Costa Rica, destacándonos por la excelencia en el servicio al cliente y nuestras instalaciones de calidad. Aspiramos a ser líderes en sostenibilidad y mejora continua en la industria turística."
+                                description="Ser el complejo de cabinas más reconocido en Puntarenas y Costa Rica, destacándonos por la excelencia en el servicio al cliente y nuestras instalaciones de calidad. "
                                 hasBorder={true}
                             />
                             <UsComponent

@@ -10,7 +10,7 @@ export function UsComponent({ imageSrc, imageAlt, title, description, hasBorder 
             <h2 className="font-bold text-[clamp(26px,_2.8vw,_3.438rem)]">{title}</h2>
           </div>
         </div>
-        <div className="flex-1 sm:flex-none justify-start  h-full">
+        <div className="flex-1 lg:flex-none justify-start px-4  h-full">
           <p className=" lg:mx-4 mt-2  lg:text-[clamp(12px,_1.5vw,_2.66rem)]">
             {description}
           </p>

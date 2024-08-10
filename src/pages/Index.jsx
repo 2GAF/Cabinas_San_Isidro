@@ -13,9 +13,14 @@ import habitaciones from '../assets/imgs/H5.jpg'
 import cabinas from '../assets/imgs/Inst20.jpg'
 import { VerMas } from "../buttons/VerMas.jsx";
 import { CarruselUsers } from "../components/CarruselUsers.jsx";
+import { useEffect } from "react";
 
 
 export function Index() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
 
   const [activeTab, setActiveTab] = useState('Habitaciones');
 

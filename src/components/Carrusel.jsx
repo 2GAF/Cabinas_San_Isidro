@@ -32,7 +32,7 @@ export function Carrusel() {
 
   return (
 
-    <Carousel showThumbs={false} showArrows={true}  interval={2000} infiniteLoop={true} stopOnHover={false}>
+    <Carousel showThumbs={false} showArrows={true} autoPlay={true} interval={2000} infiniteLoop={true} stopOnHover={true} showStatus={false}>
       {imgs.map(element => 
         (
           <div key={element.id} className='xl:h-[55rem] md:h-[30rem] sm:[20rem] h-full'>
