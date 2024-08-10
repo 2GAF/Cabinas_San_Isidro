@@ -71,7 +71,7 @@ export function TiempoCompartido() {
             } else {
                 carousel.scrollTo({
                     left: scrollAmount,
-                    behavior: 'smooth', // Smooth scroll for normal scrolling
+                    behavior: 'auto', // Smooth scroll for normal scrolling
                 });
             }
         };
@@ -213,7 +213,7 @@ export function TiempoCompartido() {
                                 tarjetas[key].map((tarjeta) => (
                                     < div key={tarjeta.id} className='hidden lg:flex flex-col w-[33.5%] h-[480px]  bg-white rounded-[30px] shadow-lg group'>
 
-                                        <div className='relative min-h-[45%] min-w-full rounded-t-[30px] overflow-hidden'>
+                                        <div className='relative min-h-[45%] min-w-full rounded-t-[30px] overflow-hidden '>
                                             <img
                                                 className=' z-20 absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100'
                                                 src={tarjeta.hover}
