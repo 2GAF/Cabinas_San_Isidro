@@ -14,10 +14,9 @@ import fanBlue from "../assets/fanBlack.svg";
 import tvBlue from "../assets/tvBlack.svg";
 import acBlue from "../assets/acBlack.svg";
 import { CantidadCompartido } from '../buttons/CantidadCompartido.jsx';
+import whatsapp from "../assets/whatsapp_icono.svg";
 import '../App.css';
-import fanWhite from "../assets/fanWhite.svg";
-import tvWhite from "../assets/tvWhite.svg";
-import acWhite from "../assets/acWhite.svg";
+import { CabinaCard } from '../buttons/CabinaCard.jsx';
 import ACOPRIBANACIO from "../assets/Patrocinio/ACOPRIBANACIO.svg";
 import ASEC from "../assets/Patrocinio/ASEC.svg";
 import ASECONSA from "../assets/Patrocinio/ASECONSA.svg";
@@ -49,6 +48,7 @@ export function TiempoCompartido() {
     const [tarjetaAlFrente, setTarjetaAlFrente] = useState(true);
     const [cantidadSeleccionada, setCantidadSeleccionada] = useState('1');
     const carouselRef = useRef(null);
+    const tarjetaRef = useRef(null);
 
 
     useEffect(() => {
@@ -81,11 +81,25 @@ export function TiempoCompartido() {
         return () => clearInterval(intervalId); // Clean up the interval on component unmount
     }, []);
 
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (tarjetaRef.current && !tarjetaRef.current.contains(event.target)) {
+                setTarjetaAlFrente(true);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [tarjetaRef]);
+
     const tarjetas = {
         '1': [
             {
                 id: 1,
-                precio: '₡200 mil',
+                precio: '₡190 mil',
                 temporada: 'Temporada A',
                 texto: 'El uso de semana del año en curso abarca Semana Santa, Vacaciones de 15 días, ni Semana 52 (específicamente para la temporada según su contrato) y debe hacerse con al menos un mes de anticipación.',
                 imagen: tortuga,
@@ -107,7 +121,7 @@ export function TiempoCompartido() {
         '3': [
             {
                 id: 3,
-                precio: '₡150 mil',
+                precio: '₡163 mil',
                 temporada: 'Temporada CD',
                 texto: 'El uso de semana del año en curso va de marzo a noviembre, esta puede fraccionarse de lunes a jueves y de jueves a lunes. Debe hacerse con al menos un mes de anticipación.',
                 imagen: tortuga,
@@ -202,7 +216,13 @@ export function TiempoCompartido() {
                                     <p className='font-outfit text-[clamp(16px,_1.8vw,_1.4125rem)]'>{tarjetaSeleccionada.texto}</p>
                                 </div>
                                 <div className='flex px-4 py-2 mx-4 justify-center'>
-                                    <button className='w-[75%] py-4 text-white font-outfit bg-blue-1 rounded-[30px] hover:bg-blue-2'>Reservar</button>
+                                    <button
+                                        className="bg-blue-1 flex text-white py-2 mb-10 px-[71px] rounded-full items-center"
+                                        onClick={() => window.location.href = 'https://wa.me/50683904884'}
+                                    >
+                                        <img src={whatsapp} alt="WhatsApp" className="size-8 mr-4" />
+                                        <span className="grid text-center text-[clamp(16px,_1.7vw,_34px)] font-outfit font-semibold">Contáctenos</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -218,13 +238,13 @@ export function TiempoCompartido() {
                                                 className=' z-20 absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100'
                                                 src={tarjeta.hover}
                                                 alt="Fondo 1"
-                                                
+
                                             />
                                             <img
                                                 className=' z-10 absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 opacity-100'
                                                 src={tarjeta.fondo}
                                                 alt="Fondo 2"
-                                                
+
                                             />
 
 
@@ -241,10 +261,11 @@ export function TiempoCompartido() {
                                         </div>
                                         <div className='flex mx-6 pb-6  justify-center mt-auto'>
                                             <button
-                                                className='w-[75%] py-4 text-white font-outfit bg-blue-1 rounded-[30px] hover:bg-blue-2'
-                                                onClick={() => window.location.href = 'https://wa.me/message/ZGYH7OW6HZAEN1'}
+                                                className="bg-blue-1 flex text-white py-2 mb-10 px-[71px] rounded-full items-center"
+                                                onClick={() => window.location.href = 'https://wa.me/50683904884'}
                                             >
-                                                Reservar
+                                                <img src={whatsapp} alt="WhatsApp" className="size-8 mr-4" />
+                                                <span className="grid text-center text-[clamp(16px,_1.7vw,_34px)] font-outfit font-semibold">Contáctenos</span>
                                             </button>
                                         </div>
 
@@ -253,10 +274,10 @@ export function TiempoCompartido() {
                             )}
                         </div>
                         <section className="flex justify-center items-center gap-x-[0.938rem] py-[1.625rem] lg:hidden ">
-                            <h1 className="font-outfit text-links font-medium">Acción:</h1>
-                            <Cantidad setter={setCantidadSeleccionada} text="1" isActive={cantidadSeleccionada} />
-                            <Cantidad setter={setCantidadSeleccionada} text="2" isActive={cantidadSeleccionada} />
-                            <Cantidad setter={setCantidadSeleccionada} text="3" isActive={cantidadSeleccionada} />
+                            <h1 className="font-outfit text-links font-medium">Temporada:</h1>
+                            <CantidadCompartido setter={setCantidadSeleccionada} text="1" type="A" isActive={cantidadSeleccionada} />
+                            <CantidadCompartido setter={setCantidadSeleccionada} text="2" type="B" isActive={cantidadSeleccionada} />
+                            <CantidadCompartido setter={setCantidadSeleccionada} text="3" type="CD" isActive={cantidadSeleccionada} />
                         </section>
                     </div>
 
@@ -264,30 +285,42 @@ export function TiempoCompartido() {
 
                     {activeTab === 'Cabinas' && (
                         <div className="">
-                            <section className="flex justify-center items-center gap-x-[0.938rem] ">
-                                <CantidadCompartido setter={setActiveCap} text='3-4 Personas' isActive={activeCap} />
-                                <CantidadCompartido setter={setActiveCap} text='5-6 Personas' isActive={activeCap} />
-                                <CantidadCompartido setter={setActiveCap} text='5-6* Personas' isActive={activeCap} />
-                                <CantidadCompartido setter={setActiveCap} text='8-9 Personas' isActive={activeCap} />
-                            </section>
                             <div className="flex justify-center font-ovo mt-4 sm:mt-8 py-[0.813rem]">
                             </div>
-                            <div className="flex justify-center">
-                                <div className="w-custom-img relative py-3w" onClick={manejarClick} role="button" tabIndex="0">
-                                    <img className={`transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
-                                    <button className={`absolute top-1 lg:top-16 right-[-2rem] md:right-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[22.375rem] md:h-[20.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 transform translate-x-0 ' : 'z-[-10] transform -translate-x-10'}`}>
+
+
+                            <div className="flex  justify-center py-5 md:py-14">
+                                <button className="w-custom-img relative py-3" onClick={manejarClick} ref={tarjetaRef}>
+                                    <img className={`transition-transform duration-500 ease-in-out rounded-2xl ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
+                                    <div className={`absolute top-1 lg:top-12 right-[-2rem] md:right-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[20.375rem] md:h-[15.375rem] lg:w-[20rem] lg:h-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 transform translate-x-0 ' : 'z-[-10] transform -translate-x-10'}`}>
                                         <div className="px-[0.626rem] flex flex-col gap-y-[0.625rem]">
                                             <h1 className="text-3xl font-medium hidden md:block">{cabinaEscogida?.titulo}</h1>
-                                            <h1 className="text-xl font-bold md:font-light">{cabinaEscogida?.precio}</h1>
-                                            <p className="font-outfit text-base hidden md:block">
+                                            <h1 className="text-xl font-bold md:font-light">{cabinaEscogida?.precioDescuento}</h1>
+                                            <p className="font-outfit text-base hidden lg:block">
                                                 {cabinaEscogida?.descripcion}
                                             </p>
-                                            <p className="text-center text-base font-light md:hidden">Ideal para las familias pequeñas y grandes.</p>
+                                            <p className="text-center text-base font-light lg:hidden">Ideal para las familias pequeñas y grandes.</p>
                                             <a href="https://wa.me/message/ZGYH7OW6HZAEN1"><div className="bg-white rounded-xl py-[0.313rem] flex justify-center text-blue-1 text-ovo text-base">Reservar</div></a>
                                         </div>
-                                    </button>
-                                </div>
+                                    </div>
+                                </button>
                             </div>
+
+                            <section className="flex justify-center items-center gap-x-[0.938rem] py-[1.625rem] lg:hidden">
+                                <h1 className="font-outfit text-links font-medium">Personas:</h1>
+                                <Cantidad setter={setActiveCap} text='3-4' isActive={activeCap} />
+                                <Cantidad setter={setActiveCap} text='5-6' isActive={activeCap} />
+                                <Cantidad setter={setActiveCap} text='5-6*' isActive={activeCap} />
+                                <Cantidad setter={setActiveCap} text='8-9' isActive={activeCap} />
+                            </section>
+
+                            {/* Selector de la capacidad de la cabina desktop */}
+                            <section className="justify-center items-center gap-x-[0.938rem] py-[1.625rem] hidden lg:flex">
+                                <CabinaCard setter={setActiveCap} text='3-4 Personas' isActive={activeCap} servicio={'Abanico'} />
+                                <CabinaCard setter={setActiveCap} text='5-6 Personas' isActive={activeCap} servicio={'Abanico'} />
+                                <CabinaCard setter={setActiveCap} text='5-6* Personas' isActive={activeCap} servicio={'A/C'} />
+                                <CabinaCard setter={setActiveCap} text='8-9 Personas' isActive={activeCap} servicio={'Abanico'} />
+                            </section>
 
                             <section className=" mt-6 md:hidden">
                                 <h1 className="font-outfit text-links font-medium">Descripción:</h1>
