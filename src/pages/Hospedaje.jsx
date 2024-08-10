@@ -81,8 +81,8 @@ export function Hospedaje() {
                         <Opcion setter={setActiveTab} text='Cabinas' isActive={activeTab} />
                     </div>
                     <div className="flex  justify-center py-5 md:py-14">
-                        <button className="w-custom-img relative py-3w" onClick={manejarClick} ref={tarjetaRef}>
-                            <img className={`transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
+                        <button className="w-custom-img relative py-3" onClick={manejarClick} ref={tarjetaRef}>
+                            <img className={`transition-transform duration-500 ease-in-out rounded-2xl ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
                             <div className={`absolute top-1 lg:top-12 right-[-2rem] md:right-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[20.375rem] md:h-[15.375rem] lg:w-[20rem] lg:h-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 transform translate-x-0 ' : 'z-[-10] transform -translate-x-10'}`}>
                                 <div className="px-[0.626rem] flex flex-col gap-y-[0.625rem]">
                                     <h1 className="text-3xl font-medium hidden md:block">{cabinaEscogida?.titulo}</h1>
@@ -140,8 +140,8 @@ export function Hospedaje() {
                         <Opcion setter={setActiveTab} text='Cabinas' isActive={activeTab} />
                     </div>
                     <div className="flex justify-center py-5 md:py-14">
-                        <div className="w-custom-img relative py-3w" onClick={manejarClick} ref={tarjetaRef} role="button" tabIndex="0">
-                            <img className={`transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
+                        <div className="w-custom-img relative py-3" onClick={manejarClick} ref={tarjetaRef} role="button" tabIndex="0">
+                            <img className={`transition-transform duration-500 ease-in-out rounded-2xl ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
                             <button className={`absolute top-1 lg:top-16 left-[-2rem] md:left-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[20.375rem] md:h-[15.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 -transform translate-x-0 ' : 'z-[-10] transform translate-x-10'}`}>
                                 <div className="px-[0.626rem] flex flex-col gap-y-[0.625rem]">
                                     <h1 className="text-3xl font-medium hidden md:block">{cabinaEscogida?.titulo}</h1>
