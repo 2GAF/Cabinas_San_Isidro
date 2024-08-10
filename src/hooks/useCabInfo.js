@@ -35,6 +35,7 @@ const cabinasInfo = {
   '3-4': {
     titulo: "Cabina para 4 personas",
     precio: "₡60.000 IVA.i",
+    precioDescuento: "₡42.500 IVA.i",
     descripcion: "Cabina equipada con utensilios básicos de cocina (platos, vasos, cubiertos, ollas, sarten, refrigeradora), cuenta con un aposento cocina-dormitorio con 1 cama matrimonial y 1 cama nido.",
     image: [c41, c42, c43],
     servicio:"Abanico",
@@ -42,6 +43,7 @@ const cabinasInfo = {
   '5-6': {
     titulo: "Cabina para 6 personas",
     precio: "₡73.000 IVA.i",
+    precioDescuento: "₡55.000 IVA.i",
     descripcion: "Cabina equipada con utensilios básicos de cocina (platos, vasos, cubiertos, ollas, sarten, refrigeradora), cuenta con dos aposentos cocina y dormitorio con 1 cama matrimonial y 2 camas nido.",
     image: [c6a1, c6a2, c6a3, c6a4, c6a5, c6a6],
     servicio:"Abanico",
@@ -49,6 +51,7 @@ const cabinasInfo = {
   '5-6*': {
     titulo: "Cabina para 6 personas",
     precio: "₡83.000 IVA.i",
+    precioDescuento: "₡65.000 IVA.i",
     descripcion: "Cabina equipada con utensilios básicos de cocina (platos, vasos, cubiertos, ollas, sarten, refrigeradora), cuenta con dos aposentos cocina y dormitorio con 1 cama matrimonial y 2 camas nido.",
     image: [c61, c62, c63, c64, c65],
     servicio:"A/C",
@@ -56,6 +59,7 @@ const cabinasInfo = {
   '8-9': {
     titulo: "Cabina para 9 personas",
     precio: "₡110.000 IVA.i",
+    precioDescuento: "₡42.500 IVA.i",
     descripcion: "Cabina equipada con utensilios básicos de cocina (platos, vasos, cubiertos, ollas, sarten, refrigeradora), cuenta con tres aposentos cocina y dos dormitorio cada uno con 1 cama matrimonial y 1 camas nido.",
     image: [c91, c92, c93, c94, c95, c96, c97],
     servicio:"Abanico",
@@ -63,28 +67,28 @@ const cabinasInfo = {
   '1': {
     titulo: "Habitación para 1 persona",
     precio: "₡25.000 IVA.i",
-    descripcion: "Habitación sencilla con aire acondicionado y televisión, cuenta con una cama matrimonial y paños",
+    descripcion: "Habitación sencilla con aire acondicionado y televisión, cuenta con una cama matrimonial y paños.",
     image: [h31, h32, h33, h34, h35],
     servicio:"A/C",
   },
   '2': {
     titulo: "Habitación para 2 personas",
     precio: "₡36.000 IVA.i",
-    descripcion: "Habitación sencilla con aire acondicionado y televisión, cuenta con una cama matrimonial y paños",
+    descripcion: "Habitación sencilla con aire acondicionado y televisión, cuenta con una cama matrimonial y paños.",
     image: [h1, h2, h3, h4],
     servicio:"A/C",
   },
   '3': {
     titulo: "Habitación para 3 personas",
     precio: "₡42.000 IVA.i",
-    descripcion: "Habitación sencilla con aire acondicionado y televisión, cuenta con una cama matrimonial, una cama individual y paños",
+    descripcion: "Habitación sencilla con aire acondicionado y televisión, cuenta con una cama matrimonial, una cama individual y paños.",
     image: [h31, h32, h33, h34, h35],
     servicio:"A/C",
   },
   'default': {
     titulo: "Habitación para 4 personas",
     precio: "₡47.000 IVA.i",
-    descripcion: "Habitación sencilla con aire acondicionado y televisión, cuenta con dos camas matrimoniales y paños",
+    descripcion: "Habitación sencilla con aire acondicionado y televisión, cuenta con dos camas matrimoniales y paños.",
     image: [h1, h2, h3, h4],
     servicio:"A/C",
   }

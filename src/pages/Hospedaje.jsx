@@ -95,7 +95,7 @@ export function Hospedaje() {
                     </div>
 
                     {/* Selector de la capacidad de la cabina móvil */}
-                    <section className="flex flex-wrap justify-center items-center gap-x-[0.938rem] py-[1.625rem] lg:hidden">
+                    <section className="flex justify-center items-center gap-x-[0.938rem] py-[1.625rem] lg:hidden">
                         <h1 className="font-outfit text-links font-medium">Personas:</h1>
                         <Cantidad setter={setActiveCap} text='3-4' isActive={activeCap} />
                         <Cantidad setter={setActiveCap} text='5-6' isActive={activeCap} />
@@ -139,14 +139,14 @@ export function Hospedaje() {
                     <div className="flex justify-center py-5 md:py-14">
                         <div className="w-custom-img relative py-3w" onClick={manejarClick} ref={tarjetaRef} role="button" tabIndex="0">
                             <img className={`transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
-                            <button className={`absolute top-1 lg:top-16 left-[-2rem] md:left-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[22.375rem] md:h-[20.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 -transform translate-x-0 ' : 'z-[-10] transform translate-x-10'}`}>
+                            <button className={`absolute top-1 lg:top-16 left-[-2rem] md:left-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[20.375rem] md:h-[15.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 -transform translate-x-0 ' : 'z-[-10] transform translate-x-10'}`}>
                                 <div className="px-[0.626rem] flex flex-col gap-y-[0.625rem]">
                                     <h1 className="text-3xl font-medium hidden md:block">{cabinaEscogida?.titulo}</h1>
                                     <h1 className="text-xl font-bold md:font-light">{cabinaEscogida?.precio}</h1>
-                                    <p className="font-outfit text-base hidden md:block">
+                                    <p className="font-outfit text-base hidden lg:block">
                                         {cabinaEscogida?.descripcion}
                                     </p>
-                                    <p className="text-center text-base font-light md:hidden">Ideal para parejas y trabajadores.</p>
+                                    <p className="text-center text-base font-light lg:hidden">Ideal para parejas y trabajadores.</p>
                                     <a href="https://wa.me/message/ZGYH7OW6HZAEN1"><div className="bg-white rounded-xl py-[0.313rem] flex justify-center text-blue-1 text-ovo text-base">Reservar</div></a>
                                 </div>
                                 </button>
@@ -155,7 +155,7 @@ export function Hospedaje() {
                     </div>
 
                     {/* Selector de la capacidad de la cabina móvil */}
-                    <section className="flex flex-wrap justify-center items-center gap-x-[0.938rem] py-[1.625rem] lg:hidden">
+                    <section className="flex justify-center items-center gap-x-[0.938rem] py-[1.625rem] lg:hidden">
                         <h1 className="font-outfit text-links font-medium">Personas:</h1>
                         <Cantidad setter={setActiveCap} text='1' isActive={activeCap} />
                         <Cantidad setter={setActiveCap} text='2' isActive={activeCap} />
@@ -171,9 +171,9 @@ export function Hospedaje() {
                         <CabinaCard setter={setActiveCap} text='4 Personas' isActive={activeCap} servicio={'A/C'} />
                     </section>
 
-                    <section className="md:hidden">
+                    <section className="lg:hidden">
                         <h1 className="font-outfit text-links font-medium">Descripción:</h1>
-                        <p className="font-outfit text-base md:hidden">{cabinaEscogida?.descripcion}</p>
+                        <p className="font-outfit text-base lg:hidden">{cabinaEscogida?.descripcion}</p>
 
                         <div className="flex gap-x-[0.938rem] py-[0.813rem]">
                             <h1 className="font-outfit text-links font-medium">Servicios:</h1>
