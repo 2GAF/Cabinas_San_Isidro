@@ -50,25 +50,35 @@ export function TiempoCompartido() {
     const [cantidadSeleccionada, setCantidadSeleccionada] = useState('1');
     const carouselRef = useRef(null);
 
+
     useEffect(() => {
         const carousel = carouselRef.current;
+        const originalContent = carousel.innerHTML;
+        carousel.innerHTML += originalContent; // Duplicate the content
+
         let scrollAmount = 0;
         const scrollStep = 1;
+        const scrollInterval = 15; // Adjust the speed of scrolling
 
         const scroll = () => {
             scrollAmount += scrollStep;
-            if (carousel.scrollWidth - scrollAmount <= carousel.clientWidth) {
-                scrollAmount = 0;
+            if (scrollAmount >= carousel.scrollWidth / 2) {
+                scrollAmount = 0; // Reset to the start of the duplicated content
+                carousel.scrollTo({
+                    left: scrollAmount,
+                    behavior: 'auto', // Instant scroll without animation
+                });
+            } else {
+                carousel.scrollTo({
+                    left: scrollAmount,
+                    behavior: 'smooth', // Smooth scroll for normal scrolling
+                });
             }
-            carousel.scrollTo({
-                left: scrollAmount,
-                behavior: 'smooth',
-            });
         };
 
-        const intervalId = setInterval(scroll, 20);
+        const intervalId = setInterval(scroll, scrollInterval);
 
-        return () => clearInterval(intervalId);
+        return () => clearInterval(intervalId); // Clean up the interval on component unmount
     }, []);
 
     const tarjetas = {
@@ -161,14 +171,14 @@ export function TiempoCompartido() {
                             <img className='' src={Tortuga} alt="a" />
                         </div>
 
-                        <div className='mt-[3vh] flex flex-col gap-3 lg:flex-row w-[100%] justify-center'>
+                        <div className='mt-[3vh] flex flex-col gap-3 md:flex-row w-[100%] justify-center'>
                             {beneficios.map((beneficio) => (
-                                <div key={beneficio.id} className='flex flex-row gap-6 lg lg:flex-col md:w-[33.5%]'>
-                                    <img className='lg:h-[6vw] ' src={beneficio.imagen} alt="" />
-                                    <div className='flex flex-col '>
-                                        <h1 className='text-[clamp(16px,_1.5vw,_2rem)] font-outfit text-black lg:text-center'>{beneficio.titulo}</h1>
+                                <div key={beneficio.id} className='flex flex-row gap-6 lg md:flex-col md:w-[33.5%]'>
+                                    <img className='md:h-[6vw] ' src={beneficio.imagen} alt="" />
+                                    <div className='flex flex-col px-6 text-ju '>
+                                        <h1 className='text-[clamp(16px,_1.5vw,_2rem)] font-outfit text-black md:text-center'>{beneficio.titulo}</h1>
                                         <div className='flex justify-end'>
-                                            <h2 className='text-[clamp(15px,_1.4vw,_2.66rem)] font-outfit font-light text-black lg:text-center'>{beneficio.descripcion}</h2>
+                                            <h2 className='text-[clamp(15px,_1.4vw,_2.66rem)] font-outfit font-light text-black md:text-center'>{beneficio.descripcion}</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -205,32 +215,37 @@ export function TiempoCompartido() {
 
                                         <div className='relative min-h-[45%] min-w-full rounded-t-[30px] overflow-hidden'>
                                             <img
-                                                className=' hidden absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 group-hover:flex'
+                                                className=' z-20 absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100'
                                                 src={tarjeta.hover}
                                                 alt="Fondo 1"
-                                                style={{ zIndex: 2 }}
+                                                
                                             />
                                             <img
-                                                className='absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300  '
+                                                className=' z-10 absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 opacity-100'
                                                 src={tarjeta.fondo}
                                                 alt="Fondo 2"
-                                                style={{ zIndex: 1 }}
+                                                
                                             />
 
 
 
-                                            <div className='absolute top-4 left-4 text-white opacity-100 z-10'>
+                                            <div className='z-40 absolute top-4 left-4 text-white opacity-100 '>
                                                 <h3 className='text-2xl font-bold font-outfit'>{tarjeta.precio}</h3>
                                                 <p className='text-lg font-outfit'>{tarjeta.temporada}</p>
                                             </div>
 
-                                            <img className='z-10 absolute top-0 right-1  h-full opacity-0 group-hover:opacity-100' src={tortuga} alt="Tortuga Santa" />
+                                            <img className='z-30 absolute top-0 right-1  h-full opacity-0 group-hover:opacity-100' src={tortuga} alt="Tortuga Santa" />
                                         </div>
                                         <div className='mx-3 my-2 font-light'>
                                             <p className='font-outfit text-[clamp(12px,_1.2vw,_1rem)]'>{tarjeta.texto}</p>
                                         </div>
                                         <div className='flex mx-6 pb-6  justify-center mt-auto'>
-                                            <button className='w-[75%] py-4 text-white font-outfit bg-blue-1 rounded-[30px] hover:bg-blue-2'>Reservar</button>
+                                            <button
+                                                className='w-[75%] py-4 text-white font-outfit bg-blue-1 rounded-[30px] hover:bg-blue-2'
+                                                onClick={() => window.location.href = 'https://wa.me/message/ZGYH7OW6HZAEN1'}
+                                            >
+                                                Reservar
+                                            </button>
                                         </div>
 
                                     </div>
@@ -274,7 +289,7 @@ export function TiempoCompartido() {
                                 </div>
                             </div>
 
-                            <section className="md:hidden">
+                            <section className=" mt-6 md:hidden">
                                 <h1 className="font-outfit text-links font-medium">Descripción:</h1>
                                 <p className="font-outfit text-base md:hidden">{cabinaEscogida?.descripcion}</p>
 

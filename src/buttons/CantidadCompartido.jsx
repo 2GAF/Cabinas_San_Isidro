@@ -12,8 +12,7 @@ export function CantidadCompartido({ setter, text, isActive }) {
 
     return (
         <button onClick={() => setter(text)} className={btnClases}>
-            {visibleText}
-            <span className="hidden sm:inline font-outfit">{hiddenText}</span>
+            {visibleText}&nbsp;<span className="hidden sm:inline font-outfit">{hiddenText}</span>
         </button>
     );
 }
