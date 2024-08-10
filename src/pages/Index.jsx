@@ -59,7 +59,7 @@ export function Index() {
                   <h3 className="text-[clamp(26px,_2.8vw,_3.438rem)] text-blue-1">Habitaciones</h3>
                   <p className="font-outfit text-[clamp(16px,_1.7vw,_22.66px)]">¡Bienvenidos a nuestras acogedoras habitaciones con aire acondicionado, perfectas para parejas o trabajadores que buscan comodidad y conveniencia en Puntarenas! Ideal para descansar después de un día de actividades. Disfrute de dormitorios espaciosos y confortables, aire acondicionado para mantener una temperatura agradable, acceso a 5 piscinas, zonas verdes y al mar, proporcionando todo lo necesario para una estancia placentera y productiva.</p>
                   <div>
-                    <VerMas enlace={'/Hospedaje'} text={'Ver más'} />
+                    <VerMas option={'Habitaciones'} enlace={'/Hospedaje'} text={'Ver más'} />
                   </div>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export function Index() {
         </section>
         {/* Servicios ofrecidos */}
         {/* Opiniones */}
-        <section className="mt-6 sm:mt-10">
+        <section className="mt-6 sm:mt-10 mb-8 sm:mb-12">
           <h2 className="text-center text-[clamp(26px,_2.8vw,_3.438rem)]">Opiniones de nuestros clientes</h2>
           <CarruselUsers/>
         </section>
