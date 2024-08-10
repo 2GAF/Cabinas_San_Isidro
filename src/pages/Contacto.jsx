@@ -5,9 +5,9 @@ import { Footer } from "../common/Footer.jsx";
 import reservacion from "../assets/reservacion_icono.svg";
 import tiempo_compartido from "../assets/tiempo_compartido_icono.svg";
 import eventos from "../assets/eventos_icono.svg";
-import reservacionimg from "../assets/imgs/reservacionesimg.png";
-import tiempo_compartidoimg from "../assets/imgs/tiempoimg.png";
-import eventosimg from "../assets/imgs/eventosimg.png";
+import reservacionimg from "../assets/imgs/reservacionesimg.jpg";
+import tiempo_compartidoimg from "../assets/imgs/tiempoimg.jpg";
+import eventosimg from "../assets/imgs/eventosimg.jpg";
 import tortuga from "../assets/tortuga_lentes.svg";
 import Tarjeta from '../components/TarjetaContacto';
 
