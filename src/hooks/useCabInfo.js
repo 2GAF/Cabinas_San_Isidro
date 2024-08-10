@@ -52,7 +52,7 @@ const cabinasInfo = {
     titulo: "Cabina para 6 personas",
     precio: "₡83.000 IVA.i",
     precioDescuento: "₡65.000 IVA.i",
-    descripcion: "Cabina equipada con utensilios básicos de cocina (platos, vasos, cubiertos, ollas, sarten, refrigeradora), cuenta con dos aposentos cocina y dormitorio con 1 cama matrimonial y 2 camas nido.",
+    descripcion: "Cabina equipada con utensilios básicos de cocina (platos, vasos, cubiertos, ollas, sarten, refrigeradora), cuenta con dos aposentos cocina, dormitorio con 1 cama matrimonial con aire acondicionado y 2 camas nido.",
     image: [c61, c62, c63, c64, c65],
     servicio:"A/C",
   },

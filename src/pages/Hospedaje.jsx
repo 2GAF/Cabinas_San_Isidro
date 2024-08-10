@@ -81,7 +81,7 @@ export function Hospedaje() {
                         <Opcion setter={setActiveTab} text='Cabinas' isActive={activeTab} />
                     </div>
                     <div className="flex  justify-center py-5 md:py-14">
-                        <button className="w-custom-img relative py-3w" onClick={manejarClick} ref={tarjetaRef}>
+                        <button className="w-custom-img relative py-3" onClick={manejarClick} ref={tarjetaRef}>
                             <img className={`transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
                             <div className={`absolute top-1 lg:top-12 right-[-2rem] md:right-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[20.375rem] md:h-[15.375rem] lg:w-[20rem] lg:h-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 transform translate-x-0 ' : 'z-[-10] transform -translate-x-10'}`}>
                                 <div className="px-[0.626rem] flex flex-col gap-y-[0.625rem]">
@@ -139,22 +139,21 @@ export function Hospedaje() {
                         <hr className="border-2 border-blue-1 h-auto rounded-3xl sm:mx-7 mx-5" />
                         <Opcion setter={setActiveTab} text='Cabinas' isActive={activeTab} />
                     </div>
-                    <div className="flex justify-center py-5 md:py-14">
-                        <div className="w-custom-img relative py-3w" onClick={manejarClick} ref={tarjetaRef} role="button" tabIndex="0">
+                    <div className="flex  justify-center py-5 md:py-14">
+                        <button className="w-custom-img relative py-3" onClick={manejarClick} ref={tarjetaRef}>
                             <img className={`transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
-                            <button className={`absolute top-1 lg:top-16 left-[-2rem] md:left-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[20.375rem] md:h-[15.375rem] lg:w-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 -transform translate-x-0 ' : 'z-[-10] transform translate-x-10'}`}>
+                            <div className={`absolute top-1 lg:top-12 left-[-2rem] md:right-[-6rem] w-[11.25rem] h-[12.375rem] md:w-[20.375rem] md:h-[15.375rem] lg:w-[20rem] lg:h-[20rem] md:top-2 bg-blue-1 font-outfit text-white flex items-center justify-center shadow-black shadow-lg rounded-lg transition-transform duration-500 ease-in-out ${tarjetaAlFrente ? 'z-0 -transform translate-x-0 ' : 'z-[-10] transform translate-x-10'}`}>
                                 <div className="px-[0.626rem] flex flex-col gap-y-[0.625rem]">
                                     <h1 className="text-3xl font-medium hidden md:block">{cabinaEscogida?.titulo}</h1>
                                     <h1 className="text-xl font-bold md:font-light">{cabinaEscogida?.precio}</h1>
                                     <p className="font-outfit text-base hidden lg:block">
                                         {cabinaEscogida?.descripcion}
                                     </p>
-                                    <p className="text-center text-base font-light lg:hidden">Ideal para parejas y trabajadores.</p>
+                                    <p className="text-center text-base font-light lg:hidden">Ideal para las familias pequeñas y grandes.</p>
                                     <a href="https://wa.me/message/ZGYH7OW6HZAEN1"><div className="bg-white rounded-xl py-[0.313rem] flex justify-center text-blue-1 text-ovo text-base">Reservar</div></a>
                                 </div>
-                                </button>
-
-                        </div>
+                            </div>
+                        </button>
                     </div>
 
                     {/* Selector de la capacidad de la cabina móvil */}
