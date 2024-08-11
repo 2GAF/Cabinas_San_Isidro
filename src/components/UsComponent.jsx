@@ -25,5 +25,5 @@ UsComponent.propTypes = {
   imageAlt: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  hasBorder: PropTypes.bool.isRequired
+  hasBorder: PropTypes.bool
 };

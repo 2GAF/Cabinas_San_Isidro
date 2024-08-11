@@ -32,8 +32,8 @@ export function Nosotros() {
                                     Sobre nosotros
                                 </h2>
                                 <h3 className="lg:flex font-regular text-[2vh]  lg:text-[1.5vw] leading-tight">
-                                    Hoy y siempre, HOTEL & CABINAS SAN ISIDRO ha sido uno de los más prestigiosos complejos de cabinas en el turismo nacional. Ubicado en la hermosa Puntarenas, Costa Rica, nuestro 
-                                    establecimiento combina la calidez de un servicio familiar con la profesionalidad de un equipo dedicado a la excelencia, ofreciendo una 
+                                    Hoy y siempre, HOTEL & CABINAS SAN ISIDRO ha sido uno de los más prestigiosos complejos de cabinas en el turismo nacional. Ubicado en la hermosa Puntarenas, Costa Rica, nuestro
+                                    establecimiento combina la calidez de un servicio familiar con la profesionalidad de un equipo dedicado a la excelencia, ofreciendo una
                                     amplia variedad de cabinas y habitaciones con todas las comodidades necesarias para parejas, trabajadores y familias grandes.
                                 </h3>
                             </div>
@@ -84,14 +84,15 @@ export function Nosotros() {
                         </h2>
                     </div>
                     <div className="flex flex-col md:flex-row justify-center items-center  rounded-lg mt-[4vw] mb-[2vh] lg:mb-[4vw] ">
-                        {/* Map Image */}
+                        {/* Imagen de Google Maps */}
                         <div className="w-full md:w-1/2 flex">
                             <iframe
+                                title="Ubicación de Cabinas San Isidro en Google Maps"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1964.7468813698372!2d-84.75954332166081!3d9.976009719614972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa031c10571ce39%3A0xb5e2acd58bbe21b2!2sCabinas%20San%20Isidro!5e0!3m2!1ses-419!2scr!4v1722641061111!5m2!1ses-419!2scr"
                                 className="rounded-[30px] w-full h-[300px] md:h-[500px]"
-                                allowfullscreen=""
+                                allowFullScreen=""
                                 loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
+                                referrerPolicy="no-referrer-when-downgrade"
                             ></iframe>
                         </div>
                         {/* Contact Details */}

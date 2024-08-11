@@ -61,7 +61,7 @@ export function CarruselUsers() {
         <div className="md:border-[3.5px] border-[1.5px] border-blue-1 rounded-[2.938rem] flex items-center relative min-h-[22rem] sm:min-h-72 md:min-h-96 justify-between px-5 md:px-0 mt-5">
             <button className="hidden md:block" onClick={sustractUser}>
                 <svg className="w-32 h-32 text-gray-800 dark:text-blue-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m15 19-7-7 7-7" />
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m15 19-7-7 7-7" />
                 </svg>
             </button>
             <div className="max-w-[40rem]">
@@ -76,19 +76,19 @@ export function CarruselUsers() {
             </div>
             <button className="hidden md:block" onClick={addUser}>
                 <svg className="w-32 h-32 text-gray-800 dark:text-blue-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m9 5 7 7-7 7" />
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m9 5 7 7-7 7" />
                 </svg>
             </button>
         </div>
             <div className='flex md:hidden justify-center items-center gap-10 mt-5'>
             <button onClick={sustractUser}>
                 <svg className="w-12 h-12 text-gray-800 dark:text-blue-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m15 19-7-7 7-7" />
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m15 19-7-7 7-7" />
                 </svg>
             </button>
             <button onClick={addUser}>
                 <svg className="w-12 h-12 text-gray-800 dark:text-blue-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m9 5 7 7-7 7" />
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m9 5 7 7-7 7" />
                 </svg>
             </button>
             </div>

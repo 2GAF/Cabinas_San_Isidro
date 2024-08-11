@@ -6,7 +6,6 @@ export function Opcion({setter, text, isActive}){
 
     const clasesActivo = "text-white bg-blue-1"
     const clasesInactivo = "text-blue-1 bg-white"
-    console.log(isActive);
 
     const btnClases = `${clasesBase} ${isActive == text ? clasesActivo : clasesInactivo}`
     return(

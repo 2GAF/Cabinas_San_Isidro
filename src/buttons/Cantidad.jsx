@@ -16,5 +16,5 @@ export function Cantidad({setter, text, isActive}){
 Cantidad.propTypes = {
     setter: PropTypes.func.isRequired,
     text: PropTypes.string.isRequired,
-    isActive: PropTypes.bool.isRequired
+    isActive: PropTypes.string.isRequired
 };

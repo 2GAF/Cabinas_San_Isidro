@@ -34,7 +34,7 @@ export function CabinaCard({ setter, text, isActive, servicio }) {
 CabinaCard.propTypes = {
     setter: PropTypes.func.isRequired,
     text: PropTypes.string.isRequired,
-    isActive: PropTypes.bool.isRequired,
+    isActive: PropTypes.string.isRequired,
     servicio: PropTypes.string.isRequired
 };
 

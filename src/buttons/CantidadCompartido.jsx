@@ -17,6 +17,6 @@ export function CantidadCompartido({ setter, text, isActive, type }) {
 CantidadCompartido.propTypes = {
     setter: PropTypes.func.isRequired,
     text: PropTypes.string.isRequired,
-    isActive: PropTypes.bool.isRequired,
+    isActive: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired
 };
