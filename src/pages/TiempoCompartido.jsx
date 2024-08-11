@@ -164,7 +164,7 @@ export function TiempoCompartido() {
     ];
 
     const tarjetaSeleccionada = tarjetas[cantidadSeleccionada][0];
-    const imagenes = (cabinaEscogida && cabinaEscogida.image) ? cabinaEscogida.image : [];
+    const imagenes = cabinaEscogida?.image ?? [];
     const manejarClick = () => {
         setTarjetaAlFrente(!tarjetaAlFrente);
     };
