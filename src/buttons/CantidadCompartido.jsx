@@ -6,10 +6,7 @@ export function CantidadCompartido({ setter, text, isActive, type }) {
     const clasesInactivo = "text-gray-1 bg-gray-2";
 
     const btnClases = `${clasesBase} ${isActive == text ? clasesActivo : clasesInactivo}`;
-
-    const visibleText = text.slice(0, 3);
-    const hiddenText = text.slice(3);
-
+    
     return (
         <button onClick={() => setter(text)} className={btnClases}>
             <span className=" sm:inline font-outfit">{type}</span>

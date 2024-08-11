@@ -12,7 +12,6 @@ import { Contacto } from './pages/Contacto';
 function App() {
 
   return (
-    <>
       <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/hospedaje" element={<Hospedaje />} />
@@ -20,7 +19,6 @@ function App() {
           <Route path="/tiempo-compartido" element={<TiempoCompartido />}/>
           <Route path="/contacto" element={<Contacto />} />
         </Routes>
-    </>
   )
 }
 

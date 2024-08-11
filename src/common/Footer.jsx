@@ -50,7 +50,7 @@ export function Footer() {
             {/* Derechos reservados y desarrollo */}
             <div className='text-center col-span-2 lg:col-span-3'>
                 <p className='font-outfit font-light text-white mt-[3.75rem]'>© Todos los derechos reservados. 2024</p>
-                <a className='font-outfit font-light text-white' href="#">Desarrollado por 2GAF Devs</a>
+                <a className='font-outfit font-light text-white' href="https://www.facebook.com/profile.php?id=61564052853445">Desarrollado por 2GAF Devs</a>
             </div>
             <Terminos isOpen={isModalOpen} onClose={closeModal}></Terminos>
         </div>

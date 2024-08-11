@@ -2,7 +2,7 @@ import { Header } from "../common/Header.jsx";
 import { Footer } from "../common/Footer.jsx";
 import hero_img from "../assets/hero-img.jpg"
 import { Opcion } from "../buttons/Opcion.jsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Carrusel } from "../components/Carrusel.jsx";
 import icon_parqueo from "../assets/icon-parqueo.png"
 import icon_zonas from "../assets/icon-zonas.png"
@@ -13,7 +13,6 @@ import habitaciones from '../assets/imgs/H5.jpg'
 import cabinas from '../assets/imgs/Inst20.jpg'
 import { VerMas } from "../buttons/VerMas.jsx";
 import { CarruselUsers } from "../components/CarruselUsers.jsx";
-import { useEffect } from "react";
 
 
 export function Index() {

@@ -28,23 +28,23 @@ import SITET from "../assets/Patrocinio/SITET.svg";
 import UNDECA from "../assets/Patrocinio/UNDECA.svg";
 
 const images = [
-    { src: ACOPRIBANACIO, name: "ACOPRIBANACIO" },
-    { src: ASEC, name: "ASEC" },
-    { src: ASECONSA, name: "ASECONSA" },
-    { src: ASEINDER, name: "ASEINDER" },
-    { src: ASEPBS, name: "ASEPBS" },
-    { src: ASEUNED, name: "ASEUNED" },
-    { src: COPESALUD, name: "COPESALUD" },
-    { src: SITET, name: "SITET" },
-    { src: UNDECA, name: "UNDECA" },
+    { id: 1, src: ACOPRIBANACIO, name: "ACOPRIBANACIO" },
+    { id: 2, src: ASEC, name: "ASEC" },
+    { id: 3, src: ASECONSA, name: "ASECONSA" },
+    { id: 4, src: ASEINDER, name: "ASEINDER" },
+    { id: 5, src: ASEPBS, name: "ASEPBS" },
+    { id: 6, src: ASEUNED, name: "ASEUNED" },
+    { id: 7, src: COPESALUD, name: "COPESALUD" },
+    { id: 8, src: SITET, name: "SITET" },
+    { id: 9, src: UNDECA, name: "UNDECA" },
 ];
 
 
 export function TiempoCompartido() {
     const [activeCap, setActiveCap] = useState('1');
-    const [activeTab, setActiveTab] = useState('Cabinas');
+    const [activeTab] = useState('Cabinas');
     const { cabinaEscogida } = useCabInfo(activeCap);
-    const [indiceActual, setIndiceActual] = useState(0);
+    const [indiceActual] = useState(0);
     const [tarjetaAlFrente, setTarjetaAlFrente] = useState(true);
     const [cantidadSeleccionada, setCantidadSeleccionada] = useState('1');
     const carouselRef = useRef(null);
@@ -94,6 +94,14 @@ export function TiempoCompartido() {
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, [tarjetaRef]);
+
+    useEffect(() => {
+        if (activeTab === 'Cabinas') {
+            setActiveCap('3-4');
+        } else {
+            setActiveCap('1');
+        }
+    }, [activeTab]);
 
     const tarjetas = {
         '1': [
@@ -155,13 +163,8 @@ export function TiempoCompartido() {
         },
     ];
 
-
-
-
-    const info = {};
-
     const tarjetaSeleccionada = tarjetas[cantidadSeleccionada][0];
-    const imagenes = cabinaEscogida && cabinaEscogida.image ? cabinaEscogida.image : [];
+    const imagenes = (cabinaEscogida && cabinaEscogida.image) ? cabinaEscogida.image : [];
     const manejarClick = () => {
         setTarjetaAlFrente(!tarjetaAlFrente);
     };
@@ -347,12 +350,12 @@ export function TiempoCompartido() {
                             ref={carouselRef}
                             className="flex overflow-x-scroll whitespace-nowrap scrollbar-hide"
                         >
-                            {images.map((image, index) => (
-                                <div key={index} className="flex flex-col items-center m-2">
+                            {images.map((image) => (
+                                <div key={image.id} className="flex flex-col items-center m-2">
                                     <div className='w-32 h-32 object-contain'>
                                         <img
                                             src={image.src}
-                                            alt={`carousel-${index}`}
+                                            alt={`carousel-${image.id}`}
                                             className="w-full h-full"
                                         />
                                     </div>

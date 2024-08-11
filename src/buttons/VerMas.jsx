@@ -9,5 +9,6 @@ export function VerMas({enlace, text, option}){
 
 VerMas.propTypes = {
     enlace: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    option: PropTypes.string.isRequired
 };

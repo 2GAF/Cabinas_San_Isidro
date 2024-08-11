@@ -7,7 +7,7 @@ import acBlue from "../assets/acBlack.svg";
 import PropTypes from 'prop-types';
 
 export function CabinaCard({ setter, text, isActive, servicio }) {
-    const isActiveCard = isActive === text;
+    const isActiveCard = text.startsWith(isActive);
     const cardStyle = isActiveCard ? 'bg-blue-1 text-white' : '';
     const btnStyle = isActiveCard ? 'bg-white text-blue-1' : 'text-white';
 
