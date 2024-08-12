@@ -78,9 +78,10 @@ export function Hospedaje() {
         const positionClass = `${posicion} md:right-[-6rem]`;
         const sizeClass = 'w-[11.25rem] h-[12.375rem] md:w-[20.375rem] md:h-[15.375rem] lg:w-[20rem] lg:h-[20rem]';
         const topClass = `absolute top-1 lg:top-12 md:top-2`;
+        const Zindex= posicion === 'right-[-2rem]' ? '-translate-x-10' : 'translate-x-10'
         const transformClass = tarjetaAlFrente
             ? 'z-0 transform translate-x-0'
-            : `z-[-10] transform ${posicion === 'right-[-2rem]' ? '-translate-x-10' : 'translate-x-10'}`;
+            : `z-[-10] transform ${Zindex}`;
         return (
             <div className="flex justify-center py-5 md:py-14">
                 <button className="w-custom-img relative py-3" onClick={manejarClick} ref={tarjetaRef}>
