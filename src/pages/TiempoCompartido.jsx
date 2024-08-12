@@ -284,14 +284,10 @@ export function TiempoCompartido() {
                         </section>
                     </div>
 
-                    <h1 className=" font-semibold text-[#2C5CA3] my-[6vh] md:my-[3vw] font-outfit text-center text-[clamp(26px,_2.8vw,_3.438rem)] leading-none">Descuentos en hospedaje para socios</h1>
+                    <h1 className=" font-semibold text-[#2C5CA3] my-[3vh] font-outfit text-center text-[clamp(26px,_2.8vw,_3.438rem)] leading-none">Descuentos en hospedaje para socios</h1>
 
                     {activeTab === 'Cabinas' && (
-                        <div className="">
-                            <div className="flex justify-center font-ovo mt-4 sm:mt-8 py-[0.813rem]">
-                            </div>
-
-
+                        <div>
                             <div className="flex  justify-center py-5 md:py-14">
                                 <button className="w-custom-img relative py-3" onClick={manejarClick} ref={tarjetaRef}>
                                     <img className={`transition-transform duration-500 ease-in-out rounded-2xl ${tarjetaAlFrente ? 'z-0' : 'z-10'}`} src={imagenes[indiceActual]} alt="" />
